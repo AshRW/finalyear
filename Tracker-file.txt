@@ -1,0 +1,9 @@
+Styling:
+SASS
+
+Core UI Documentation:
+https://coreui.io/docs/getting-started/introduction/
+
+Dependancies:
+1> Core UI:
+npm install @coreui/coreui
