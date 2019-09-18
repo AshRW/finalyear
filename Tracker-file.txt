@@ -10,3 +10,9 @@ https://coreui.io/docs/getting-started/introduction/
 Dependancies:
 1> Core UI:
 npm install @coreui/coreui
+
+Work Track
+18 Sept 2019:
+firebase fields created and json file backed up
+NOTICE TO CHANGE - CHANGE ROLE IN FIREBASE FROM SIMPLE ENGLISH TO ENCRYPTED KEYWORD FOR HIGH SECURITY
+			iN FIREBASE CLASS NAMED ATTRIBUTE IS CREATED (TEST)
