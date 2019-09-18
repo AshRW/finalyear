@@ -1,0 +1,33 @@
+{
+  "admin" : {
+    "access" : "full",
+    "name" : "test_admin",
+    "password" : "admin_pass",
+    "role" : "admin"
+  },
+  "class" : [ null, {
+    "class_teacher" : "teacher_unique_id",
+    "cr" : "student_unique_id",
+    "students" : "[unique_id, unique_id2, unique_id3]",
+    "subjects" : "[maths, english, hindi, science]"
+  } ],
+  "student" : {
+    "unique_id" : {
+      "class" : 2,
+      "name" : "test_student_name",
+      "role" : "student",
+      "status" : true,
+      "uid" : "unique_id"
+    }
+  },
+  "teacher" : {
+    "unique_id" : {
+      "class" : [ 1, 2, 3 ],
+      "name" : "test_teacher_name",
+      "role" : "teacher",
+      "status" : true,
+      "subject" : "[maths,  english]",
+      "uid" : "unique_id"
+    }
+  }
+}
