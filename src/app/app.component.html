@@ -9,33 +9,21 @@
     <link rel="stylesheet" href="https://unpkg.com/@coreui/coreui/dist/css/coreui.min.css">
   </head>
   <body class="app">
-    <div>
-      <div class="row">
-        <div class="col">
-      <div class="card" style="width: 75rem;">
-          <div class="card-body">
-              <div class="row">
-                <div class="col center_wala">
-                <button type="button" class="btn btn-success">1</button>
+    <div class="card center_wala" style="width: 75%;">
+      <div class="card-body">
+          <div class="row">
+            <div class="col">
+              <button type="button" class="btn btn-success" (click)="goToHome()">Home</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-success" (click)="goToLogin()">Login</button>
               </div>
-              <div class="col center_wala">
-                  <button type="button" class="btn btn-success">2</button>
+              <div class="col">
+                  <button type="button" class="btn btn-success" (click)="goToRegister()">Register</button>
                 </div>
-                <div class="col center_wala">
-                    <button type="button" class="btn btn-success">3</button>
-                  </div>
-                  <div class="col center_wala">
-                      <button type="button" class="btn btn-success">4</button>
-                    </div>
-                    <div class="col center_wala">
-                        <button type="button" class="btn btn-success">5</button>
-                      </div>
-              </div>
           </div>
-        </div>
-        </div>
       </div>
-      </div>
+    </div>
     <router-outlet></router-outlet>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, Bootstrap, then CoreUI  -->
@@ -45,4 +33,32 @@
     <script src="https://unpkg.com/@coreui/coreui/dist/js/coreui.min.js"></script>
   </body>
 </html>
+
+<!-- <div>
+  <div class="row">
+    <div class="col">
+  <div class="card" style="width: 75rem;">
+      <div class="card-body">
+          <div class="row">
+            <div class="col center_wala">
+            <button type="button" class="btn btn-success">1</button>
+          </div>
+          <div class="col center_wala">
+              <button type="button" class="btn btn-success">2</button>
+            </div>
+            <div class="col center_wala">
+                <button type="button" class="btn btn-success">3</button>
+              </div>
+              <div class="col center_wala">
+                  <button type="button" class="btn btn-success">4</button>
+                </div>
+                <div class="col center_wala">
+                    <button type="button" class="btn btn-success">5</button>
+                  </div>
+          </div>
+      </div>
+    </div>
+    </div>
+  </div>
+  </div> -->
 

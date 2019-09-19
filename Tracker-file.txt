@@ -2,14 +2,14 @@ Git HTTP link:
 https://gitlab.com/AshRW/finalyearmain.git
 
 Styling:
-SASS
+SCSS
 
 Core UI Documentation:
 https://coreui.io/docs/getting-started/introduction/
 
 Dependancies:
 1> Core UI:
-npm install @coreui/coreui
+npm install @coreui/coreui - 18 September 2019
 2> Core UI icons:
 npm install @coreui/icons --save - 19 September 2019
 
@@ -21,3 +21,9 @@ NOTICE TO CHANGE - CHANGE ROLE IN FIREBASE FROM SIMPLE ENGLISH TO ENCRYPTED KEYW
 
 19 Sept 2019:
 Changed project from sass styling to scss styling and installed @coreui/icons
+Firebase configured
+Firebase dummy schema made
+Firebase Authentication services made in angular
+login page
+registration main page
+student reg form half way- fetching years and departments from fdb - work in progress

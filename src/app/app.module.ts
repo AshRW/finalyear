@@ -3,12 +3,17 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule, AngularFireDatabase } from '@angular/fire/database';
 import {AngularFireAuthModule } from '@angular/fire/auth';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { HomePageComponent } from './home-page/home-page.component';
+import { LoginPageComponent } from './login-page/login-page.component';
+import { RegistrationPageComponent } from './registration-page/registration-page.component';
+import { StudentRegistrationComponent } from './student-registration/student-registration.component';
+import { TeacherRegistrationComponent } from './teacher-registration/teacher-registration.component';
 
 var firebaseConfig = {
   apiKey: "AIzaSyAlLYUhYKAkAchSeJLCtKNsBBoNSEVjBro",
@@ -21,19 +26,28 @@ var firebaseConfig = {
 };
 var routes:Routes=[
   {path: "home", component: HomePageComponent},
-  {path:'', redirectTo:'home', pathMatch: "full"}
+  {path:'', redirectTo:'home', pathMatch: "full"},
+  {path: "login", component: LoginPageComponent},
+  {path: "registration", component: RegistrationPageComponent},
+  {path: "studentregistration", component: StudentRegistrationComponent},
+  {path: "teacherregistration", component: TeacherRegistrationComponent}
 ];
 @NgModule({
   declarations: [
     AppComponent,
-    HomePageComponent
+    HomePageComponent,
+    LoginPageComponent,
+    RegistrationPageComponent,
+    StudentRegistrationComponent,
+    TeacherRegistrationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(routes),
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireDatabaseModule,AngularFireAuthModule
+    AngularFireDatabaseModule,AngularFireAuthModule,
+    FormsModule, ReactiveFormsModule
   ],
   providers: [{
     provide: LocationStrategy,
