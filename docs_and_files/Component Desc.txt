@@ -1,1 +1,6 @@
 1. home_page - Basic landing page of application
+2. login_page - Logins of teacher and student
+3. registration_page - main option to Reg of teacher and student
+4. student_registration - student registration
+5. teachers_registration - teacher registration
+6. admin_dashboard - institutes admin must verify newly registered students and teachers
