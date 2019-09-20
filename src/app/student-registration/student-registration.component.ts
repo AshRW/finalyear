@@ -12,7 +12,7 @@ import { stringify } from '@angular/compiler/src/util';
 })
 export class StudentRegistrationComponent implements OnInit {
 
-  constructor(private afd:AngularFireDatabase) { }
+  constructor(private afd:AngularFireDatabase, private fire:FireserService) { }
 
   ngOnInit() {
     this.getLevelAndDepartment();
@@ -23,21 +23,32 @@ export class StudentRegistrationComponent implements OnInit {
     email: new FormControl('', Validators.required),
     password: new FormControl('', Validators.required),
     name: new FormControl('', Validators.required),
-    class: new FormControl('', Validators.required)
+    class: new FormControl('', Validators.required),
+    department:new FormControl('', Validators.required)
   });
   ins_type:any;
   department:any=[];
   level:any=[];
-level_type:any;
+  level_type:any;
   ins_type_data:any;
   
   register(){
-    this.push_id=this.afd.createPushId();
     this.send_data=this.studentregForm.value;
     this.send_data.status=false;
     this.send_data.role="student";
     this.send_data.uid=this.push_id;
     console.log(this.send_data);
+    this.fire.signup(this.send_data).then(success=>{
+      console.log(success.user.uid);
+      this.push_id=success.user.uid;
+      this.send_data.uid=this.push_id;
+      console.log(BASE_URL+"data/student/"+this.push_id+"/");
+      this.afd.object(BASE_URL+"data/student/"+this.push_id+"/").set(this.send_data).then(success=>{
+        console.log(success);
+      },error=>{
+        console.log(error);
+      })
+    }, error=>{console.log("error");})
   }
   getLevelAndDepartment(){
    

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-page',
@@ -8,7 +9,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class LoginPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit() {
   }
@@ -16,5 +17,7 @@ export class LoginPageComponent implements OnInit {
     email: new FormControl('', Validators.required),
     password: new FormControl('', Validators.required)
   });
-
+  goToAdminLogin(){
+    this.router.navigateByUrl('/adminlogin')
+  }
 }

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { AngularFireAuth } from '@angular/fire/auth/auth';
+import { AngularFireAuth } from '@angular/fire/auth/';
 import * as firebase from 'firebase';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -30,5 +31,8 @@ export class FireserService {
     console.log(email);
     var auth = firebase.auth();
     return auth.sendPasswordResetEmail(email);
+  }
+  test(){
+    console.log("test success");
   }
 }

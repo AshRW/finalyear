@@ -7,13 +7,13 @@
                 <div class="card mx-4">
                   <div class="card-body p-4">
                     <form [formGroup]="loginForm">
-                      <h1>Login</h1>
-                      <p class="text-muted">Log In to your account</p>
+                      <h1>Admin Login</h1>
+                      <p class="text-muted">Admin Login only</p>
                       <div class="input-group mb-3">
                         <div class="input-group-prepend">
                           <span class="input-group-text"><i class="icon-user"></i></span>
                         </div>
-                        <input type="text" class="form-control" placeholder="Email" formControlName="email" required>
+                        <input type="text" class="form-control" placeholder="Name" formControlName="name" required>
                       </div>
       
                       <div class="input-group mb-3">
@@ -27,18 +27,9 @@
                   <div class="card-footer p-4">
                     <div class="row">
                       <div class="col-6">
-                        <button (click)="loginTeacher()" class="btn btn-block btn-success" type="button" [disabled]="!loginForm.valid"><span>Teacher's Login</span></button>
-                      </div>
-                      <div class="col-6">
-                        <button (click)="loginStudent()" class="btn btn-block btn-success" type="button" [disabled]="!loginForm.valid"><span>Student's Login</span></button>
+                        <button (click)="adminlogin()" class="btn btn-block btn-success" type="button" [disabled]="!loginForm.valid"><span>Login</span></button>
                       </div>
                     </div>
-                    <div class="row"><div class="col-3"></div><div class="col-6">
-                        <button (click)="goToResetPassword()" type="button" class="btn btn-block btn-link">Forgot Password?</button>
-                     </div></div>
-                     <div class="row"><div class="col-3"></div><div class="col-6">
-                        <button (click)="goToAdminLogin()" type="button" class="btn btn-block btn-link">Admin</button>
-                     </div></div>
                     
                    </div>
                 </div>

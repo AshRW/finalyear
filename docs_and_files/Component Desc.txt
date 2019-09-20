@@ -4,3 +4,4 @@
 4. student_registration - student registration
 5. teachers_registration - teacher registration
 6. admin_dashboard - institutes admin must verify newly registered students and teachers
+7. institute_admin_login - institute's admin login for user verification
