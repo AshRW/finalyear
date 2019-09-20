@@ -8,7 +8,7 @@ import { BASE_URL } from '../base_url';
   styleUrls: ['./admin-dashboard.component.scss']
 })
 export class AdminDashboardComponent implements OnInit {
-
+  public loading = false;
   constructor(private afd:AngularFireDatabase) { }
 student_data:any=[];
 teacher_data:any=[];
@@ -17,6 +17,7 @@ teacher_data:any=[];
     this.getTeacher();
   }
   getStudent(){
+    this.loading = true;
     this.afd.list(BASE_URL+'data/student/', ref=>ref.orderByChild('status').equalTo(false)).snapshotChanges().subscribe(success=>{
       console.log(snapshotToArray(success));
       this.student_data=snapshotToArray(success);
@@ -26,6 +27,7 @@ teacher_data:any=[];
     this.afd.list(BASE_URL+"data/teacher/", ref=>ref.orderByChild('status').equalTo(false)).snapshotChanges().subscribe(success=>{
       console.log(snapshotToArray(success));
       this.teacher_data=snapshotToArray(success);
+      this.loading = false;
     })
   }
   verifyS(i){
