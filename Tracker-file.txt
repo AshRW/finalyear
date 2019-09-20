@@ -12,6 +12,11 @@ Dependancies:
 npm install @coreui/coreui - 18 September 2019
 2> Core UI icons:
 npm install @coreui/icons --save - 19 September 2019
+3> Loading:
+npm i ngx-loading - 21 September 2019
+4> Alert:
+npm install sweetalert2 - 21 September 2019
+
 
 Work Track
 18 Sept 2019:
@@ -29,3 +34,6 @@ registration main page
 student reg form half way- fetching years and departments from fdb - work in progress
 20 Sept 2019
 Student Registeration completed
+21 Sept 2019
+Swal, Ngx loader added
+student reg done, teacher reg done, admin dashboard done

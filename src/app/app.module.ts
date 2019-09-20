@@ -9,6 +9,8 @@ import { AngularFireDatabaseModule, AngularFireDatabase } from '@angular/fire/da
 import {AngularFireAuthModule } from '@angular/fire/auth';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
+import { NgxLoadingModule, ngxLoadingAnimationTypes } from 'ngx-loading';
+import Swal from 'sweetalert2'
 import { HomePageComponent } from './home-page/home-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { RegistrationPageComponent } from './registration-page/registration-page.component';
@@ -16,6 +18,7 @@ import { StudentRegistrationComponent } from './student-registration/student-reg
 import { TeacherRegistrationComponent } from './teacher-registration/teacher-registration.component';
 import { InstituteAdminLoginComponent } from './institute-admin-login/institute-admin-login.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+
 
 var firebaseConfig = {
   apiKey: "AIzaSyAlLYUhYKAkAchSeJLCtKNsBBoNSEVjBro",
@@ -53,7 +56,8 @@ var routes:Routes=[
     RouterModule.forRoot(routes),
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,AngularFireAuthModule,
-    FormsModule, ReactiveFormsModule
+    FormsModule, ReactiveFormsModule,
+    NgxLoadingModule.forRoot({})
   ],
   providers: [{
     provide: LocationStrategy,

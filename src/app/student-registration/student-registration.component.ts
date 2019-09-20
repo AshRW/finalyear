@@ -11,12 +11,13 @@ import { stringify } from '@angular/compiler/src/util';
   styleUrls: ['./student-registration.component.scss']
 })
 export class StudentRegistrationComponent implements OnInit {
-
+  public loading = false;
   constructor(private afd:AngularFireDatabase, private fire:FireserService) { }
-
+  
   ngOnInit() {
     this.getLevelAndDepartment();
   }
+  
   send_data:any;
   push_id:any;
   studentregForm:any = new FormGroup({
@@ -51,6 +52,7 @@ export class StudentRegistrationComponent implements OnInit {
     }, error=>{console.log("error");})
   }
   getLevelAndDepartment(){
+    this.loading=true;
    
     this.afd.object(BASE_URL+'ins_type').snapshotChanges().subscribe(success=>{
       this.ins_type=success.payload.val();
@@ -75,10 +77,12 @@ export class StudentRegistrationComponent implements OnInit {
           this.department[i]=this.ins_type_data.department[i];
         }
         console.log(this.department);
+        this.loading=false;
 
       })
       
     })
+    
   }
 
 }

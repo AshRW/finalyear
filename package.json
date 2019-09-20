@@ -23,7 +23,9 @@
     "@coreui/coreui": "^2.1.12",
     "@coreui/icons": "^0.4.1",
     "firebase": "^6.6.0",
+    "ngx-loading": "^3.0.1",
     "rxjs": "~6.4.0",
+    "sweetalert2": "^8.17.6",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"
   },
