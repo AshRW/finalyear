@@ -27,3 +27,5 @@ Firebase Authentication services made in angular
 login page
 registration main page
 student reg form half way- fetching years and departments from fdb - work in progress
+20 Sept 2019
+Student Registeration completed

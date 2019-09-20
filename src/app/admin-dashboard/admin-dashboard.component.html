@@ -1,0 +1,71 @@
+<div class="app-body">
+    <main class="main d-flex align-items-center">
+      <div class="container-fluid">
+            <div style="text-align: center;"><h1>Admin <span class="badge badge-secondary">Dashboard</span></h1></div>
+            <br>
+            <div class="card-header">
+                    <b>Student Verification</b>
+                  </div>
+          <table class="table table-responsive-sm table-hover table-outline mb-0">
+              <thead class="thead-light">
+                  <tr>
+                      <th class="text-center">Student Name</th>
+                      <th class="text-center">Class</th>
+                      <th class="text-center">Email</th>
+                      <th class="text-center">Status</th>
+                      <th class="text-center">Action</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let s of student_data; let i = index;">
+                      <td class="text-center">{{s.name}}</td>
+                      <td class="text-center">{{s.class}}</td>
+                      <td class="text-center">{{s.email}}</td>
+                      <td class="text-center">{{s.status}}</td>
+                      <th class="text-center"><button type="button" class="btn btn-success" (click)="verifyS(i)">Verify
+                      </button></th>
+                  </tr>
+              </tbody>
+          </table>
+          <div *ngIf="student_data.length==0">
+            <table class="table table-responsive-sm table-hover table-outline mb-0">
+                <tbody>
+                    <tr><td class="text-center">Nothing to catch-up here!</td></tr>
+                  </tbody>
+            </table>
+          </div>
+
+
+          <div class="card-header">
+                <b>Teacher Verification</b>
+              </div>
+          <table class="table table-responsive-sm table-hover table-outline mb-0">
+                <thead class="thead-light">
+                    <tr>
+                        <th class="text-center">Teacher Name</th>
+                        <th class="text-center">Email</th>
+                        <th class="text-center">Status</th>
+                        <th class="text-center">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let t of teacher_data; let i = index;">
+                        <td class="text-center">{{t.name}}</td>
+                        <td class="text-center">{{t.email}}</td>
+                        <td class="text-center">{{t.status}}</td>
+                        <th class="text-center"><button type="button" class="btn btn-success" (click)="verifyT(i)">Verify
+                        </button></th>
+                    </tr>
+                </tbody>
+            </table>
+            <div *ngIf="teacher_data.length==0">
+              <table class="table table-responsive-sm table-hover table-outline mb-0">
+                  <tbody>
+                      <tr><td class="text-center">Nothing to catch-up here!</td></tr>
+                    </tbody>
+              </table>
+            </div>
+
+      </div>
+      </main>
+      </div>

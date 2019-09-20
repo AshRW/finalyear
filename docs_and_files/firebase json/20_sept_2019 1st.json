@@ -1,0 +1,70 @@
+{
+  "institute_type" : {
+    "College" : {
+      "Class" : [ "11th", "12th" ],
+      "department" : [ "Science", "Commerce", "Arts" ],
+      "level" : "Class"
+    },
+    "Engineering College" : {
+      "Year" : [ "1st", "2nd", "3rd", "Final" ],
+      "department" : [ "CSE", "ETC", "MECH", "EE" ],
+      "level" : "Year"
+    },
+    "Management School" : {
+      "level" : "Year"
+    },
+    "School" : {
+      "Class" : [ "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th", "10th" ],
+      "level" : "Class"
+    }
+  },
+  "institutes" : {
+    "institute_id" : {
+      "data" : {
+        "admin" : {
+          "access" : "full",
+          "name" : "test_admin",
+          "password" : "admin_pass",
+          "role" : "admin"
+        },
+        "class" : {
+          "1st" : {
+            "class_teacher" : "teacher_unique_id",
+            "class_teacher_name" : "some_name",
+            "cr" : "student_unique-id",
+            "students" : [ "unique_id", "unique_id2", "unique_id3" ],
+            "subjects" : [ "Maths", "English", "Hindi", "Science" ]
+          }
+        },
+        "student" : {
+          "unique_id" : {
+            "class" : "2nd",
+            "name" : "test_student_name",
+            "role" : "student",
+            "status" : true,
+            "uid" : "unique_id"
+          }
+        },
+        "teacher" : {
+          "unique_id" : {
+            "admin_access" : false,
+            "class" : [ "1st", "2nd", "3rd" ],
+            "name" : "test_teacher_name",
+            "role" : "teacher",
+            "status" : true,
+            "subject" : [ "Math", "English" ],
+            "uid" : "unique_id"
+          }
+        }
+      },
+      "ins_id" : "institute_id",
+      "ins_name" : "Jhulelal Institute of Technology",
+      "ins_type" : "Engineering College"
+    }
+  },
+  "super_admin" : {
+    "access" : "ultimate",
+    "password" : "superuser",
+    "username" : "cheatbot420"
+  }
+}

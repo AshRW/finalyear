@@ -27,12 +27,25 @@
                             </div>
                             <input type="text" class="form-control" placeholder="Name" formControlName="name" required>
                           </div>
-                          <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                  <span class="input-group-text"><i class="icon-lock"></i></span>
-                                </div>
-                                <input type="text" class="form-control" placeholder="{{level_type}}" formControlName="class" required>
+                        <div class="input-group mb-3" *ngIf="ins_type=='Engineering College'">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="icon-lock"></i></span>
                               </div>
+                        <select id="inputState" class="form-control" formControlName="class" required>
+                          <option selected value="">Year</option>
+                          <option value="{{y}}" *ngFor="let y of level">{{y}}</option>
+                        </select>
+                        </div>
+                        
+                        <div class="input-group mb-3" *ngIf="ins_type=='Engineering College'">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="icon-lock"></i></span>
+                              </div>
+                        <select id="inputState" class="form-control" formControlName="department" required>
+                          <option selected value="">Department</option>
+                          <option value="{{d}}" *ngFor="let d of department">{{d}}</option>
+                        </select>
+                        </div>
                     </form>
                   </div>
                   <div class="card-footer p-4">

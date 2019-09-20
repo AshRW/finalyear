@@ -14,6 +14,8 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { RegistrationPageComponent } from './registration-page/registration-page.component';
 import { StudentRegistrationComponent } from './student-registration/student-registration.component';
 import { TeacherRegistrationComponent } from './teacher-registration/teacher-registration.component';
+import { InstituteAdminLoginComponent } from './institute-admin-login/institute-admin-login.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 
 var firebaseConfig = {
   apiKey: "AIzaSyAlLYUhYKAkAchSeJLCtKNsBBoNSEVjBro",
@@ -30,7 +32,9 @@ var routes:Routes=[
   {path: "login", component: LoginPageComponent},
   {path: "registration", component: RegistrationPageComponent},
   {path: "studentregistration", component: StudentRegistrationComponent},
-  {path: "teacherregistration", component: TeacherRegistrationComponent}
+  {path: "teacherregistration", component: TeacherRegistrationComponent},
+  {path:"adminlogin", component: InstituteAdminLoginComponent},
+  {path:"admindash", component:AdminDashboardComponent}
 ];
 @NgModule({
   declarations: [
@@ -39,7 +43,9 @@ var routes:Routes=[
     LoginPageComponent,
     RegistrationPageComponent,
     StudentRegistrationComponent,
-    TeacherRegistrationComponent
+    TeacherRegistrationComponent,
+    InstituteAdminLoginComponent,
+    AdminDashboardComponent
   ],
   imports: [
     BrowserModule,
