@@ -3,6 +3,8 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { FireserService } from '../services/fireser.service';
 import { BASE_URL } from '../base_url';
+import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-teacher-registration',
@@ -11,7 +13,7 @@ import { BASE_URL } from '../base_url';
 })
 export class TeacherRegistrationComponent implements OnInit {
 
-  constructor(private afd:AngularFireDatabase, private fire:FireserService) { }
+  constructor(private afd:AngularFireDatabase, private fire:FireserService, private router:Router) { }
 
   ngOnInit() {
   }
@@ -32,6 +34,12 @@ export class TeacherRegistrationComponent implements OnInit {
       this.form_data.uid=success.user.uid;
       this.afd.object(BASE_URL+'data/teacher/'+success.user.uid+'/').set(this.form_data).then(success=>{
         console.log(success);
+        Swal.fire({
+          type: 'success',
+          title: 'Registered Successfully!',
+          footer: 'You may Login after Admin Verification of your ID'
+        })
+        this.router.navigateByUrl('/home');
       }, error=>{console.log(error)})
     }, error=>{console.log(error)})
   }

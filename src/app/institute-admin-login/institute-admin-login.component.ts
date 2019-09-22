@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./institute-admin-login.component.scss']
 })
 export class InstituteAdminLoginComponent implements OnInit {
+  public loading = false;
 
   constructor(private afd:AngularFireDatabase, private router:Router) { }
 admin_data:any;
@@ -27,15 +28,20 @@ login_data:any;
     if(this.login_data.name==this.admin_data.name){
       if(this.login_data.password==this.admin_data.password){
         console.log("Logged In")
-        this.router.navigateByUrl('/admindash');
+        sessionStorage.setItem("key", JSON.stringify(this.admin_data));
+        // location.reload();
+        this.router.navigateByUrl('/admindash')
+        
       }
     }
   }
 
   getAdmin(){
+    this.loading = true;
     this.afd.object(BASE_URL+'data/admin/').snapshotChanges().subscribe(success=>{
       console.log(success.payload.val());
       this.admin_data=success.payload.val();
+      this.loading=false;
     }, error=>{console.log(error);
     })
   }
