@@ -3,8 +3,9 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { AngularFireDatabase } from '@angular/fire/database';
 import {FireserService} from '../services/fireser.service';
 import {BASE_URL} from '../base_url';
-import { analyzeAndValidateNgModules } from '@angular/compiler';
-import { stringify } from '@angular/compiler/src/util';
+import Swal from 'sweetalert2'
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-student-registration',
   templateUrl: './student-registration.component.html',
@@ -12,7 +13,7 @@ import { stringify } from '@angular/compiler/src/util';
 })
 export class StudentRegistrationComponent implements OnInit {
   public loading = false;
-  constructor(private afd:AngularFireDatabase, private fire:FireserService) { }
+  constructor(private afd:AngularFireDatabase, private fire:FireserService, private router:Router) { }
   
   ngOnInit() {
     this.getLevelAndDepartment();
@@ -46,6 +47,12 @@ export class StudentRegistrationComponent implements OnInit {
       console.log(BASE_URL+"data/student/"+this.push_id+"/");
       this.afd.object(BASE_URL+"data/student/"+this.push_id+"/").set(this.send_data).then(success=>{
         console.log(success);
+        Swal.fire({
+          type: 'success',
+          title: 'Registered Successfully!',
+          footer: 'You may Login after Admin Verification of your ID'
+        })
+        this.router.navigateByUrl('/home');
       },error=>{
         console.log(error);
       })

@@ -15,9 +15,12 @@
             <div class="col">
               <button type="button" class="btn btn-success" (click)="goToHome()">Home</button>
             </div>
-            <div class="col">
+            <div class="col" *ngIf="logged==false">
                 <button type="button" class="btn btn-success" (click)="goToLogin()">Login</button>
               </div>
+              <div class="col" *ngIf="logged==true">
+                  <button type="button" class="btn btn-success" (click)="logOut()">Logout</button>
+                </div>
               <div class="col">
                   <button type="button" class="btn btn-success" (click)="goToRegister()">Register</button>
                 </div>

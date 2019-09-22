@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterContentChecked} from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,11 +6,19 @@ import { Router } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit, AfterContentChecked{
+  logged=false;
   constructor(private router:Router){}
-  ngOnInit(){
-    console.log("Hello world");
+  ngAfterContentChecked() {
+    this.check();
   }
+  // ngOnChanges(){
+  //   this.check();
+  // }
+  ngOnInit(){
+    this.check();
+  }
+  
   title = 'mainproject';
   goToHome(){
     this.router.navigateByUrl("/home");
@@ -20,6 +28,18 @@ export class AppComponent implements OnInit{
   }
   goToLogin(){
     this.router.navigateByUrl("/login");
+  }
+  logOut(){
+    sessionStorage.clear();
+    this.router.navigateByUrl('/home');
+  }
+  check(){
+    if(sessionStorage.length>0){
+      this.logged=true;
+    }
+    else{
+      this.logged=false;
+    }
   }
 }
 

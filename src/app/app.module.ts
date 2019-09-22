@@ -18,6 +18,8 @@ import { StudentRegistrationComponent } from './student-registration/student-reg
 import { TeacherRegistrationComponent } from './teacher-registration/teacher-registration.component';
 import { InstituteAdminLoginComponent } from './institute-admin-login/institute-admin-login.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { TeacherDashComponent } from './teacher-dash/teacher-dash.component';
+import { StudentDashComponent } from './student-dash/student-dash.component';
 
 
 var firebaseConfig = {
@@ -37,7 +39,9 @@ var routes:Routes=[
   {path: "studentregistration", component: StudentRegistrationComponent},
   {path: "teacherregistration", component: TeacherRegistrationComponent},
   {path:"adminlogin", component: InstituteAdminLoginComponent},
-  {path:"admindash", component:AdminDashboardComponent}
+  {path:"admindash", component:AdminDashboardComponent},
+  {path:"studentdash", component:StudentDashComponent},
+  {path:"teacherdash", component:TeacherDashComponent}
 ];
 @NgModule({
   declarations: [
@@ -48,7 +52,9 @@ var routes:Routes=[
     StudentRegistrationComponent,
     TeacherRegistrationComponent,
     InstituteAdminLoginComponent,
-    AdminDashboardComponent
+    AdminDashboardComponent,
+    TeacherDashComponent,
+    StudentDashComponent
   ],
   imports: [
     BrowserModule,

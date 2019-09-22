@@ -7,22 +7,21 @@ import {BASE_URL} from '../base_url';
   styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent implements OnInit {
-
+  public loading = false;
   constructor(private afd:AngularFireDatabase) { }
-  test:any;
+  ins_name:any;
+
   ngOnInit() {
-    console.log(BASE_URL+'data/teacher/unique_id/class/');
-  this.afd.object(BASE_URL+'data/teacher/unique_id/class/').snapshotChanges().subscribe(success=>{
-    console.log(success.payload.val());
-    this.test=success.payload.val();
-    for(let i=0; i<3;i++){
-      console.log(this.test[i]);
-    }
-  })
+    this.getInstitute();
   }
-trial(){
-  this.afd.object(BASE_URL+"/data/test/").set({"lol":"okay"})
-}
+  getInstitute(){
+    this.loading = true;
+    this.afd.object(BASE_URL+'ins_name/').snapshotChanges().subscribe(success=>{
+      this.ins_name=success.payload.val();
+      this.loading = false;
+    })
+  }
+
 
 }
 var snapshotToArray = function(snaps){
