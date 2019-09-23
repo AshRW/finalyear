@@ -7,6 +7,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit, AfterContentChecked{
+  student=false;
+  teacher=false;
+  session_data:any;
   logged=false;
   constructor(private router:Router){}
   ngAfterContentChecked() {
@@ -36,10 +39,34 @@ export class AppComponent implements OnInit, AfterContentChecked{
   check(){
     if(sessionStorage.length>0){
       this.logged=true;
+      this.loginas();
     }
     else{
       this.logged=false;
+      this.loginas();
     }
+  }
+  loginas(){
+    if(sessionStorage.length>0){
+      this.session_data=JSON.parse(sessionStorage.getItem('key'))
+    if(this.session_data.role=='student'){
+      this.student=true;
+      this.teacher=false;
+    }
+    else if(this.session_data.role=='teacher'){
+      this.teacher=true;
+      this.student=false;
+    }
+    else{
+      this.teacher=false;
+      this.student=false;
+    }
+    }
+    else{
+      this.teacher=false;
+      this.student=false;
+    }
+    
   }
 }
 
