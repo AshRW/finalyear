@@ -40,3 +40,9 @@ student reg done, teacher reg done, admin dashboard done
 23 Sept 2019
 new components: student dashboard and teacher dashboard created;
 teacher and student login with session done
+25 Sept 2019
+new component: student result, student chat
+student dashboard complete
+student nav bar applied
+26 Sept 2019
+new components: teacher chat, teacher chat list

@@ -20,6 +20,14 @@ import { InstituteAdminLoginComponent } from './institute-admin-login/institute-
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { TeacherDashComponent } from './teacher-dash/teacher-dash.component';
 import { StudentDashComponent } from './student-dash/student-dash.component';
+import { StudentMoodleComponent } from './student-moodle/student-moodle.component';
+import { StudentNoticeComponent } from './student-notice/student-notice.component';
+import { StudentResultComponent } from './student-result/student-result.component';
+import { StudentChatComponent } from './student-chat/student-chat.component';
+import { StudentChatListComponent } from './student-chat-list/student-chat-list.component';
+import { TeacherChatListComponent } from './teacher-chat-list/teacher-chat-list.component';
+import { TeacherChatComponent } from './teacher-chat/teacher-chat.component';
+import { AdminSettingComponent } from './admin-setting/admin-setting.component';
 
 
 var firebaseConfig = {
@@ -41,7 +49,15 @@ var routes:Routes=[
   {path:"adminlogin", component: InstituteAdminLoginComponent},
   {path:"admindash", component:AdminDashboardComponent},
   {path:"studentdash", component:StudentDashComponent},
-  {path:"teacherdash", component:TeacherDashComponent}
+  {path:"teacherdash", component:TeacherDashComponent},
+  {path:"studentmoodle", component:StudentMoodleComponent},
+  {path:"studentnotice", component:StudentNoticeComponent},
+  {path:"studentchat", component:StudentChatComponent},
+  {path:"studentchatlist", component:StudentChatListComponent},
+  {path:"studentresult", component:StudentResultComponent},
+  {path:"teacherchat", component:TeacherChatComponent},
+  {path:"teacherchatlist", component:TeacherChatListComponent},
+  {path:"adminsetting", component:AdminSettingComponent}
 ];
 @NgModule({
   declarations: [
@@ -54,7 +70,15 @@ var routes:Routes=[
     InstituteAdminLoginComponent,
     AdminDashboardComponent,
     TeacherDashComponent,
-    StudentDashComponent
+    StudentDashComponent,
+    StudentMoodleComponent,
+    StudentNoticeComponent,
+    StudentResultComponent,
+    StudentChatComponent,
+    StudentChatListComponent,
+    TeacherChatListComponent,
+    TeacherChatComponent,
+    AdminSettingComponent
   ],
   imports: [
     BrowserModule,

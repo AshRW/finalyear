@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 export class AppComponent implements OnInit, AfterContentChecked{
   student=false;
   teacher=false;
+  admin=false;
   session_data:any;
   logged=false;
   constructor(private router:Router){}
@@ -52,21 +53,42 @@ export class AppComponent implements OnInit, AfterContentChecked{
     if(this.session_data.role=='student'){
       this.student=true;
       this.teacher=false;
+      this.admin=false;
     }
     else if(this.session_data.role=='teacher'){
       this.teacher=true;
       this.student=false;
+      this.admin=false;
+    }
+    else if(this.session_data.role=='admin'){
+      this.admin=true;
+      this.teacher=false;
+      this.student=false;      
     }
     else{
       this.teacher=false;
       this.student=false;
+      this.admin=false;
     }
     }
     else{
       this.teacher=false;
       this.student=false;
+      this.admin=false;
     }
     
+  }
+  goToMoodle(){
+this.router.navigateByUrl('/studentmoodle');
+  }
+  goToNotice(){
+this.router.navigateByUrl('/studentnotice');
+  }
+  goToDashboard(){
+this.router.navigateByUrl('/studentdash');
+  }
+  gotoToSetting(){
+    this.router.navigateByUrl('/adminsetting')
   }
 }
 

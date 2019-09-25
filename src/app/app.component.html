@@ -21,19 +21,28 @@
               <div class="col" *ngIf="logged==true">
                   <button type="button" class="btn btn-success" (click)="logOut()">Logout</button>
                 </div>
-              <div class="col">
+              <div class="col" *ngIf="logged==false">
                   <button type="button" class="btn btn-success" (click)="goToRegister()">Register</button>
                 </div>
           </div>
           <div class="row" style="padding-top: 3%" *ngIf="student==true">
             <div class="col">
               <div class="btn-group" role="group" aria-label="Basic example">
-                  <button type="button" class="btn btn-primary">Moodle</button>
-                  <button type="button" class="btn btn-primary">Notice</button>
-                  <button type="button" class="btn btn-primary">Dashboard</button>
+                  <button type="button" class="btn btn-primary" (click)="goToMoodle()">Moodle</button>
+                  <button type="button" class="btn btn-primary" (click)="goToNotice()">Notice</button>
+                  <button type="button" class="btn btn-primary" (click)="goToDashboard()">Dashboard</button>
                 </div>
               </div>
           </div>
+          <div class="row" style="padding-top: 3%" *ngIf="admin==true">
+              <div class="col">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-primary" (click)="goTo()">1st</button>
+                    <button type="button" class="btn btn-primary" (click)="goToNotice()">Notice</button>
+                    <button type="button" class="btn btn-primary" (click)="gotoToSetting()">Settings</button>
+                  </div>
+                </div>
+            </div>
       </div>
     </div>
     <router-outlet></router-outlet>
