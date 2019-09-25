@@ -1,1 +1,66 @@
-<p>dashboard works student</p>
+<div class="app-body">
+    <main class="main d-flex align-items-center">
+            <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }" [template]="customLoadingTemplate"></ngx-loading>
+      <div class="container-fluid">
+          <div class="card"><div class="card-body">
+            <div class="row">
+                    <div class="col">
+                      <div class="callout callout-info b-t-1 b-r-1 b-b-1">
+                        <small class="text-muted">Name</small><br>
+                        <strong class="h4">{{student_data.name}}</strong>
+                      </div>
+                    </div><!--/.col-->
+                    <div class="col">
+                      <div class="callout callout-danger b-t-1 b-r-1 b-b-1">
+                        <small class="text-muted">Email</small><br>
+                        <strong class="h4">{{student_data.email}}</strong>
+                      </div>
+                    </div><!--/.col-->
+                    <div class="col">
+                      <div class="callout callout-warning b-t-1 b-r-1 b-b-1">
+                        <small class="text-muted">{{level_data}}</small><br>
+                        <strong class="h4">{{student_data.class}}</strong>
+                      </div>
+                    </div><!--/.col-->
+                    <div class="col">
+                      <div class="callout callout-success b-t-1 b-r-1 b-b-1">
+                        <small class="text-muted">Department</small><br>
+                        <strong class="h4">{{student_data.department}}</strong>
+                      </div>
+                    </div><!--/.col-->
+                    <div class="col">
+                        <div class="callout callout-success b-t-1 b-r-1 b-b-1">
+                          <small class="text-muted">Class Teacher</small><br>
+                          <strong class="h4">{{student_data.teacher_name}}</strong>
+                        </div>
+                      </div><!--/.col-->
+                  </div><!--/.row-->
+                  <div class="row">
+                    <div class="col">
+                        <div class="jumbotron jumbotron-fluid">
+                            <div class="container">
+                              <h1 class="display-5">{{ins_data.ins_name}}</h1>
+                              <p class="lead">{{ins_data.ins_type}}</p>
+                            </div>
+                          </div>
+                    </div>
+                  </div>
+        <div class="row" style="text-align: center">
+          <div class="col" style="padding: 2%">
+            <button type="button" class="btn btn-pill btn-info" (click)="goToResult()">Results</button>
+        </div>
+        <div class="col" style="padding: 2%">
+          <button type="button" class="btn btn-pill btn-info" (click)="goToFeedback()">FeedBack</button>
+      </div>
+      <div class="col" style="padding: 2%">
+        <button type="button" class="btn btn-pill btn-info" (click)="goToApplicatio()">Application</button>
+    </div>
+    <div class="col" style="padding: 2%">
+      <button type="button" class="btn btn-pill btn-info" (click)="goToChat()">Chat</button>
+  </div>
+    </div>
+  </div></div>
+    </div>
+    </main>
+    </div>
+    
