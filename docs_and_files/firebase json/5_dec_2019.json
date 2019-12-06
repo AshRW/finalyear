@@ -1,0 +1,241 @@
+{
+  "institute_type" : {
+    "College" : {
+      "Class" : [ "11th", "12th" ],
+      "department" : [ "Science", "Commerce", "Arts" ],
+      "level" : "Class"
+    },
+    "Engineering College" : {
+      "Year" : [ "1st", "2nd", "3rd", "Final" ],
+      "department" : [ "CSE", "ETC", "MECH", "EE" ],
+      "level" : "Year"
+    },
+    "Management School" : {
+      "level" : "Year"
+    },
+    "School" : {
+      "Class" : [ "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th", "10th" ],
+      "level" : "Class"
+    }
+  },
+  "institutes" : {
+    "institute_id" : {
+      "data" : {
+        "admin" : {
+          "access" : "full",
+          "name" : "test",
+          "password" : "pass",
+          "role" : "admin"
+        },
+        "chat_data" : {
+          "chat_uid" : {
+            "data" : {
+              "-LpkSD_kRHrGFZ8yHH_h" : {
+                "date" : "27-8-2019",
+                "msg" : "hey",
+                "receiver" : "58ZVPY7EFHbPzPjzc8ZX4r8gXLc2",
+                "sender" : "3IarZhp5vxR6YfnVspC4VKvQFpE3",
+                "time" : "7:32"
+              },
+              "-LpkVNyoVUlClM2KjRLX" : {
+                "date" : "27-8-2019",
+                "msg" : "hey2",
+                "receiver" : "3IarZhp5vxR6YfnVspC4VKvQFpE3",
+                "sender" : "58ZVPY7EFHbPzPjzc8ZX4r8gXLc2",
+                "time" : "7:46"
+              },
+              "-LpktKhgAM77fHiisz_Q" : {
+                "date" : "27-8-2019",
+                "msg" : "hi",
+                "receiver" : "58ZVPY7EFHbPzPjzc8ZX4r8gXLc2",
+                "sender" : "3IarZhp5vxR6YfnVspC4VKvQFpE3",
+                "time" : "9:35"
+              },
+              "-LpktMOwLBUXlBG8G6vH" : {
+                "date" : "27-8-2019",
+                "msg" : "lol",
+                "receiver" : "3IarZhp5vxR6YfnVspC4VKvQFpE3",
+                "sender" : "58ZVPY7EFHbPzPjzc8ZX4r8gXLc2",
+                "time" : "9:35"
+              },
+              "-LplCEwgm1WxxbruM9em" : {
+                "date" : "27-8-2019",
+                "msg" : "123",
+                "receiver" : "3IarZhp5vxR6YfnVspC4VKvQFpE3",
+                "sender" : "58ZVPY7EFHbPzPjzc8ZX4r8gXLc2",
+                "time" : "11:2"
+              },
+              "-LplCHDD033fNgG3Pl2-" : {
+                "date" : "27-8-2019",
+                "msg" : "hi ",
+                "receiver" : "58ZVPY7EFHbPzPjzc8ZX4r8gXLc2",
+                "sender" : "3IarZhp5vxR6YfnVspC4VKvQFpE3",
+                "time" : "11:2"
+              },
+              "-LplQOjXmbDlmNuZ8h2o" : {
+                "date" : "27-8-2019",
+                "msg" : "hello",
+                "receiver" : "58ZVPY7EFHbPzPjzc8ZX4r8gXLc2",
+                "sender" : "3IarZhp5vxR6YfnVspC4VKvQFpE3",
+                "time" : "12:4"
+              },
+              "-LplQRDBW8HdfGHMtQEx" : {
+                "date" : "27-8-2019",
+                "msg" : "klk;",
+                "receiver" : "58ZVPY7EFHbPzPjzc8ZX4r8gXLc2",
+                "sender" : "3IarZhp5vxR6YfnVspC4VKvQFpE3",
+                "time" : "12:4"
+              },
+              "-LplSJKW0Bc-sW389pz3" : {
+                "date" : "27-8-2019",
+                "msg" : "lol",
+                "receiver" : "3IarZhp5vxR6YfnVspC4VKvQFpE3",
+                "sender" : "58ZVPY7EFHbPzPjzc8ZX4r8gXLc2",
+                "time" : "12:12"
+              },
+              "-LqVHFKi7gEIdD4qV0-j" : {
+                "date" : "6-9-2019",
+                "msg" : "yo1",
+                "receiver" : "58ZVPY7EFHbPzPjzc8ZX4r8gXLc2",
+                "sender" : "3IarZhp5vxR6YfnVspC4VKvQFpE3",
+                "time" : "14:26"
+              }
+            },
+            "student_id" : "3IarZhp5vxR6YfnVspC4VKvQFpE3",
+            "teacher_id" : "58ZVPY7EFHbPzPjzc8ZX4r8gXLc2"
+          }
+        },
+        "class" : {
+          "department" : {
+            "CSE" : {
+              "1st" : {
+                "A" : {
+                  "class_teacher" : "teacher_id",
+                  "cr" : "some_student_id",
+                  "students" : [ "some_id", "some_id" ],
+                  "subjects" : [ "math", "subject", "df", "df", "fef" ]
+                }
+              },
+              "hod" : "some_id"
+            }
+          }
+        },
+        "student" : {
+          "3IarZhp5vxR6YfnVspC4VKvQFpE3" : {
+            "class" : "1st",
+            "department" : "ETC",
+            "email" : "stu3@stu.com",
+            "name" : "stu3",
+            "password" : "ash123",
+            "role" : "student",
+            "status" : true,
+            "uid" : "3IarZhp5vxR6YfnVspC4VKvQFpE3"
+          },
+          "47nGQbIGDXRPGxEoCzJWXBD7JAf1" : {
+            "class" : "3rd",
+            "department" : "ETC",
+            "email" : "student5@student.com",
+            "name" : "student",
+            "password" : "abcdefg",
+            "role" : "student",
+            "status" : true,
+            "uid" : "47nGQbIGDXRPGxEoCzJWXBD7JAf1"
+          },
+          "A11OXnBloLWdxZhcpQgHRbGfWJI2" : {
+            "class" : "1st",
+            "department" : "CSE",
+            "email" : "stu2@stu.com",
+            "name" : "stu2",
+            "password" : "ash123",
+            "role" : "student",
+            "status" : true,
+            "uid" : "A11OXnBloLWdxZhcpQgHRbGfWJI2"
+          },
+          "Y5N5d3LoZMP6027D33cBWTaX1Vn1" : {
+            "class" : "1st",
+            "department" : "CSE",
+            "email" : "student_test@gmail.com",
+            "name" : "Test_student_1",
+            "password" : "ash123",
+            "role" : "student",
+            "status" : true,
+            "uid" : "Y5N5d3LoZMP6027D33cBWTaX1Vn1"
+          },
+          "Ym8l3rNczBU88Y2dVM8NdQZbzdq2" : {
+            "class" : "1st",
+            "department" : "CSE",
+            "email" : "ash@ash.com",
+            "name" : "ash",
+            "password" : "ash123",
+            "role" : "student",
+            "status" : true,
+            "uid" : "Ym8l3rNczBU88Y2dVM8NdQZbzdq2"
+          },
+          "pHB7rAfsmgUuxfBDCsY89PIaTEq1" : {
+            "class" : "1st",
+            "department" : "CSE",
+            "email" : "test2@gmail.com",
+            "name" : "test123",
+            "password" : "ash123",
+            "role" : "student",
+            "status" : true,
+            "uid" : "pHB7rAfsmgUuxfBDCsY89PIaTEq1"
+          },
+          "unique_id" : {
+            "class" : "2nd",
+            "name" : "test_student_name",
+            "role" : "student",
+            "status" : true,
+            "uid" : "unique_id"
+          }
+        },
+        "teacher" : {
+          "58ZVPY7EFHbPzPjzc8ZX4r8gXLc2" : {
+            "admin_access" : false,
+            "email" : "teacher@teach.com",
+            "name" : "teach",
+            "password" : "ash123",
+            "role" : "teacher",
+            "status" : true,
+            "uid" : "58ZVPY7EFHbPzPjzc8ZX4r8gXLc2"
+          },
+          "IHh469g1fBQhWJV33H9bYXWx1c73" : {
+            "admin_access" : false,
+            "email" : "teacher3@teach.com",
+            "name" : "teach3",
+            "password" : "ash123",
+            "role" : "teacher",
+            "status" : true,
+            "uid" : "IHh469g1fBQhWJV33H9bYXWx1c73"
+          },
+          "iXm2IamCsWebnO7OSdc0bSrHR8n2" : {
+            "admin_access" : false,
+            "email" : "teacher2@teacher.com",
+            "name" : "Teacher2",
+            "password" : "ash123",
+            "role" : "teacher",
+            "status" : false,
+            "uid" : "iXm2IamCsWebnO7OSdc0bSrHR8n2"
+          },
+          "unique_id" : {
+            "admin_access" : false,
+            "class" : [ "1st", "2nd", "3rd" ],
+            "name" : "test_teacher_name",
+            "role" : "teacher",
+            "status" : true,
+            "subject" : [ "Math", "English" ],
+            "uid" : "unique_id"
+          }
+        }
+      },
+      "ins_id" : "institute_id",
+      "ins_name" : "Jhulelal Institute of Technology",
+      "ins_type" : "Engineering College"
+    }
+  },
+  "super_admin" : {
+    "access" : "ultimate",
+    "password" : "superuser",
+    "username" : "cheatbot420"
+  }
+}

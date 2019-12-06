@@ -24,6 +24,9 @@ export class AppComponent implements OnInit, AfterContentChecked{
   }
   
   title = 'mainproject';
+  goToadmindash(){
+    this.router.navigateByUrl("/admindash")
+  }
   goToHome(){
     this.router.navigateByUrl("/home");
   }
