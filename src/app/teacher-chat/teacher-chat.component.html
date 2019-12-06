@@ -1,1 +1,40 @@
-<p>teacher-chat works!</p>
+<div class="app-body">
+    <main class="main d-flex align-items-center">
+            <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }" [template]="customLoadingTemplate"></ngx-loading>
+      <div class="container-fluid">
+          <div class="card"><div class="card-body">
+                <h2>Teacher's Chat</h2>
+                <div  *ngFor="let c of chatdata">
+                <div *ngIf="uid==c.sender">
+                <div class="container">
+                  <img src="/assets/img/avatars/1.jpg" alt="Avatar" style="width:25px;">
+                  <p>You: {{c.msg}}</p>
+                  <span class="time-right">{{c.time}}</span>
+                </div>
+                </div>
+                <div *ngIf="uid!=c.sender">
+                <div class="container darker">
+                  <img src="/assets/img/avatars/3.jpg" alt="Avatar" class="right" style="width:25px;">
+                  <p>Student: {{c.msg}}</p>
+                  <span class="time-left">{{c.time}}</span>
+                </div>
+                </div>
+              </div>
+                
+              
+                <div class="container">
+                <label for="msg"><b></b></label>
+                <div class="controls">
+                  <form [formGroup]="msgForm">
+                  <input id="" class="form-control" size="16" type="text" formControlName="message">
+                  <span class="input-group-append">
+                    <button class="btn btn-secondary" type="submit" (click)="send()">Send!</button>
+                  </span>
+                </form>
+              </div>
+              </div>
+        </div>
+    </div>
+</div>
+</main>
+</div>

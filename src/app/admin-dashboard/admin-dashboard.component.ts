@@ -3,6 +3,7 @@ import { AngularFireDatabase } from '@angular/fire/database';
 import { BASE_URL } from '../base_url';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
+import { AdminService } from '../services/admin.service';
 
 @Component({
   selector: 'app-admin-dashboard',
@@ -11,39 +12,17 @@ import Swal from 'sweetalert2';
 })
 export class AdminDashboardComponent implements OnInit {
   public loading = false;
-  constructor(private afd:AngularFireDatabase, private router:Router) {}
+  constructor(private afd:AngularFireDatabase, private router:Router, private as:AdminService) {}
 student_data:any=[];
 teacher_data:any=[];
-session_data:any;
+//session_data:any;
   ngOnInit() {
-    this.checkLogin();
+    //this.checkLogin();
+    this.as.checkLogin();
     this.getStudent();
     this.getTeacher();
   }
-  checkLogin(){
-    if(sessionStorage.length>0){//something in session
-      this.session_data = JSON.parse(sessionStorage.getItem("key"));
-      if(this.session_data.role!='admin'){
-        Swal.fire({
-          type: 'error',
-          title: 'Admins Only',
-          footer: 'Access Denied'
-        })
-        this.router.navigateByUrl('/home');
-      }
-      else{
-        console.log("logged in");
-      }
-    }
-    else{
-      Swal.fire({
-        type: 'error',
-        title: 'Admins Only',
-        footer: 'Access Denied'
-      })
-      this.router.navigateByUrl('/home');
-    }
-  }
+  
   getStudent(){
     this.loading = true;
     this.afd.list(BASE_URL+'data/student/', ref=>ref.orderByChild('status').equalTo(false)).snapshotChanges().subscribe(success=>{

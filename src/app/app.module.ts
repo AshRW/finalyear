@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {AngularFireStorageModule} from '@angular/fire/storage';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule, AngularFireDatabase } from '@angular/fire/database';
 import {AngularFireAuthModule } from '@angular/fire/auth';
@@ -28,6 +29,8 @@ import { StudentChatListComponent } from './student-chat-list/student-chat-list.
 import { TeacherChatListComponent } from './teacher-chat-list/teacher-chat-list.component';
 import { TeacherChatComponent } from './teacher-chat/teacher-chat.component';
 import { AdminSettingComponent } from './admin-setting/admin-setting.component';
+import { StudentFeedbackComponent } from './student-feedback/student-feedback.component';
+import { TestoneComponent } from './testone/testone.component';
 
 
 var firebaseConfig = {
@@ -35,7 +38,7 @@ var firebaseConfig = {
   authDomain: "final-year-2fffe.firebaseapp.com",
   databaseURL: "https://final-year-2fffe.firebaseio.com",
   projectId: "final-year-2fffe",
-  storageBucket: "",
+  storageBucket: "gs://final-year-2fffe.appspot.com",
   messagingSenderId: "332019641222",
   appId: "1:332019641222:web:de1098980f2d492bd4da07"
 };
@@ -57,7 +60,8 @@ var routes:Routes=[
   {path:"studentresult", component:StudentResultComponent},
   {path:"teacherchat", component:TeacherChatComponent},
   {path:"teacherchatlist", component:TeacherChatListComponent},
-  {path:"adminsetting", component:AdminSettingComponent}
+  {path:"adminsetting", component:AdminSettingComponent},
+  {path:"testone", component:TestoneComponent}
 ];
 @NgModule({
   declarations: [
@@ -78,7 +82,9 @@ var routes:Routes=[
     StudentChatListComponent,
     TeacherChatListComponent,
     TeacherChatComponent,
-    AdminSettingComponent
+    AdminSettingComponent,
+    StudentFeedbackComponent,
+    TestoneComponent
   ],
   imports: [
     BrowserModule,
@@ -86,6 +92,7 @@ var routes:Routes=[
     RouterModule.forRoot(routes),
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,AngularFireAuthModule,
+    AngularFireStorageModule,
     FormsModule, ReactiveFormsModule,
     NgxLoadingModule.forRoot({})
   ],

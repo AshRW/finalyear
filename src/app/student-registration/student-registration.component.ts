@@ -5,6 +5,7 @@ import {FireserService} from '../services/fireser.service';
 import {BASE_URL} from '../base_url';
 import Swal from 'sweetalert2'
 import { Router } from '@angular/router';
+import { FireauthService } from '../services/fireauth.service';
 
 @Component({
   selector: 'app-student-registration',
@@ -13,7 +14,7 @@ import { Router } from '@angular/router';
 })
 export class StudentRegistrationComponent implements OnInit {
   public loading = false;
-  constructor(private afd:AngularFireDatabase, private fire:FireserService, private router:Router) { }
+  constructor(private afd:AngularFireDatabase, private fire:FireauthService, private router:Router) { }
   
   ngOnInit() {
     this.getLevelAndDepartment();
