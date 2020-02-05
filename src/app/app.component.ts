@@ -1,5 +1,8 @@
 import { Component, OnInit, AfterContentChecked} from '@angular/core';
 import { Router } from '@angular/router';
+import { AngularFireDatabase } from '@angular/fire/database';
+import { BASE_URL } from './base_url';
+
 
 @Component({
   selector: 'app-root',
@@ -12,14 +15,16 @@ export class AppComponent implements OnInit, AfterContentChecked{
   admin=false;
   session_data:any;
   logged=false;
-  constructor(private router:Router){}
+  constructor(private router:Router, private afd:AngularFireDatabase){}
   ngAfterContentChecked() {
+    this.status_check();
     this.check();
   }
   // ngOnChanges(){
   //   this.check();
   // }
   ngOnInit(){
+    this.status_check();
     this.check();
   }
   
@@ -49,6 +54,17 @@ export class AppComponent implements OnInit, AfterContentChecked{
       this.logged=false;
       this.loginas();
     }
+  }
+  status_check(){
+    let status_a;
+    this.afd.object(BASE_URL+'status/').snapshotChanges().subscribe(success=>{
+      //console.log(success.payload.val());
+      status_a=success.payload.val();
+      //console.log(status_a);
+      if(status_a!="active"){
+        this.router.navigateByUrl('/deactive');
+      }
+    })
   }
   loginas(){
     if(sessionStorage.length>0){

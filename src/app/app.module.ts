@@ -31,6 +31,7 @@ import { TeacherChatComponent } from './teacher-chat/teacher-chat.component';
 import { AdminSettingComponent } from './admin-setting/admin-setting.component';
 import { StudentFeedbackComponent } from './student-feedback/student-feedback.component';
 import { TestoneComponent } from './testone/testone.component';
+import { DeactivePageComponent } from './deactive-page/deactive-page.component';
 
 
 var firebaseConfig = {
@@ -61,7 +62,8 @@ var routes:Routes=[
   {path:"teacherchat", component:TeacherChatComponent},
   {path:"teacherchatlist", component:TeacherChatListComponent},
   {path:"adminsetting", component:AdminSettingComponent},
-  {path:"testone", component:TestoneComponent}
+  {path:"testone", component:TestoneComponent},
+  {path:"deactive", component:DeactivePageComponent}
 ];
 @NgModule({
   declarations: [
@@ -84,7 +86,8 @@ var routes:Routes=[
     TeacherChatComponent,
     AdminSettingComponent,
     StudentFeedbackComponent,
-    TestoneComponent
+    TestoneComponent,
+    DeactivePageComponent
   ],
   imports: [
     BrowserModule,
