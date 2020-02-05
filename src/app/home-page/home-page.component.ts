@@ -14,6 +14,7 @@ export class HomePageComponent implements OnInit {
   ngOnInit() {
     this.getInstitute();
   }
+  
   getInstitute(){
     this.loading = true;
     this.afd.object(BASE_URL+'ins_name/').snapshotChanges().subscribe(success=>{

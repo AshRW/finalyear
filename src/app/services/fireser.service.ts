@@ -16,6 +16,12 @@ export class FireserService {
   test(){
     console.log("test success");
   }
+  pullList(path){
+    return this.afd.list(path);
+  }
+  pullObject(path){
+    return this.afd.object(path);
+  }
 }
 
 var snapshotToArray = function(snaps){
