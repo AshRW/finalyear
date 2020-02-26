@@ -25,6 +25,7 @@
                   <button type="button" class="btn btn-success" (click)="goToRegister()">Register</button>
                 </div>
           </div>
+
           <div class="row" style="padding-top: 3%" *ngIf="student==true">
             <div class="col">
               <div class="btn-group" role="group" aria-label="Basic example">
@@ -39,13 +40,14 @@
                 <div class="btn-group" role="group" aria-label="Basic example">
                     <button type="button" class="btn btn-primary" (click)="goToadmindash()">Admin Dashboard</button>
                     <button type="button" class="btn btn-primary" (click)="goToNotice()">Notice</button>
+                    <button type="button" class="btn btn-primary" (click)="gotoToAdminmoodle()">Moodle</button>   
                     <button type="button" class="btn btn-primary" (click)="gotoToSetting()">Settings</button>
                   </div>
                 </div>
             </div>
       </div>
     </div>
-    <router-outlet></router-outlet>
+    <router-outlet ></router-outlet>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, Bootstrap, then CoreUI  -->
     <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>

@@ -102,6 +102,9 @@ export class AppComponent implements OnInit, AfterContentChecked{
   goToMoodle(){
 this.router.navigateByUrl('/studentmoodle');
   }
+  gotoToAdminmoodle(){
+    this.router.navigateByUrl('/adminmoodle');
+  }
   goToNotice(){
 this.router.navigateByUrl('/studentnotice');
   }

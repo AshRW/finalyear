@@ -2,9 +2,15 @@
 //     text-align: center;
 //     align-content: center;
 // }
+// .center_wala{
+//     align-self: center;
+//     text-align: center;
+//     align-content: center;
+//     align-items: center;
+// }
 .center_wala{
-    align-self: center;
     text-align: center;
+    margin: auto;
     align-content: center;
     align-items: center;
 }
