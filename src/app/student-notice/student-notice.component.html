@@ -3,7 +3,7 @@
     <main class="main d-flex align-items-center">
         <div class="container-fluid">
             <div class="row">
-             <div class="col-md-6 mx-auto">
+             <div class="col-md-6 mx-auto" (click)="dis()">
              <div class="card mx-4">
               <div class="card-body p-4">
                 <h2 class="card-title">Date: {{date}}</h2>
@@ -11,6 +11,13 @@
                   </div>
                   </div>
                   </div>
+                  <div class="col-md-6 mx-auto" *ngIf="admin_status==='admin'">
+                    <div class="card mx-4">
+                     <div class="card-body p-4">
+                       <h2 class="card-title">New Notice</h2>
+                       <button type="button" class="btn btn-primary btn-lg" (click)="newNotice()">Create Notice</button>
+                      </div></div></div>
+                       
                   </div>
                   <div class="row">
                     <div class="col mx-auto">

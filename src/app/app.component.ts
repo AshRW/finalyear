@@ -2,6 +2,7 @@ import { Component, OnInit, AfterContentChecked} from '@angular/core';
 import { Router } from '@angular/router';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { BASE_URL } from './base_url';
+import { NoticeserService } from './services/noticeser.service';
 
 
 @Component({
@@ -15,7 +16,7 @@ export class AppComponent implements OnInit, AfterContentChecked{
   admin=false;
   session_data:any;
   logged=false;
-  constructor(private router:Router, private afd:AngularFireDatabase){}
+  constructor(private router:Router, private afd:AngularFireDatabase, private notice:NoticeserService){}
   ngAfterContentChecked() {
     this.status_check();
     this.check();
@@ -26,6 +27,7 @@ export class AppComponent implements OnInit, AfterContentChecked{
   ngOnInit(){
     this.status_check();
     this.check();
+    // this.notice.getActiveNotice();
   }
   
   title = 'mainproject';
