@@ -47,13 +47,46 @@ export class HomePageComponent implements OnInit {
     })
   }
 
-  clicker_first(index:any){
-    Swal.fire({
-      type:'info',
-      title: this.first[index].title, 
-      text:"Desc: "+this.first[index].desc,
-      footer:"For Date: "+this.first[index].for_date+" Given Date: "+this.first[index].given_date
-    });
+  clicker_first(index:any, swi:any){
+    switch (swi) {
+      case 1: {
+        Swal.fire({
+          type:'info',
+          title: this.first[index].title, 
+          text:"Desc: "+this.first[index].desc,
+          footer:"For Date: "+this.first[index].for_date+" Given Date: "+this.first[index].given_date
+        });
+      }
+        break;
+        case 2:{
+          Swal.fire({
+            type:'info',
+            title: this.second[index].title, 
+            text:"Desc: "+this.second[index].desc,
+            footer:"For Date: "+this.second[index].for_date+" Given Date: "+this.second[index].given_date
+          });
+        }
+        break;
+        case 3:{
+          Swal.fire({
+            type:'info',
+            title: this.third[index].title, 
+            text:"Desc: "+this.third[index].desc,
+            footer:"For Date: "+this.third[index].for_date+" Given Date: "+this.third[index].given_date
+          });
+        }
+        break;
+        case 4:{
+          Swal.fire({
+            type:'info',
+            title: this.final[index].title, 
+            text:"Desc: "+this.final[index].desc,
+            footer:"For Date: "+this.final[index].for_date+" Given Date: "+this.final[index].given_date
+          });
+        }
+        break;
+    }
+    
   }
 
 

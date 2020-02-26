@@ -14,7 +14,9 @@
         <div class="card mx-4">
             <div class="card-body p-4">
                 <h3 class="card-title">1st Year</h3>
-                <div class="jumbotron jumbotron-fluid" *ngFor="let f of first; let i=index;" (click)="clicker_first(i)">
+                <!-- *ngIf="first.length==0" -->
+                <div *ngIf="first.length!=0">
+                <div class="jumbotron jumbotron-fluid" *ngFor="let f of first; let i=index;" (click)="clicker_first(i,1)">
                     <div class="container">
                       <h4 class="display-5">{{f.title}}</h4>
                       <!-- <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p> -->
@@ -22,6 +24,15 @@
                       <h6 class="text-muted">For Date:{{f.for_date}}</h6><h6 class="text-muted">Date of notice:{{f.given_date}}</h6>
                     </div>
                   </div>
+                </div>
+                <div *ngIf="first.length==0">
+                    <div class="jumbotron jumbotron-fluid">
+                        <div class="container">
+                          <h4 class="display-5">No Notice</h4>
+                          <!-- <marquee behavior="scroll" direction="left">No Notice</marquee> -->
+                        </div>
+                      </div>
+                    </div>
             </div>
         </div>
     </div>
@@ -29,7 +40,8 @@
         <div class="card mx-4">
             <div class="card-body p-4">
                 <h3 class="card-title">2nd Year</h3>
-                <div class="jumbotron jumbotron-fluid" *ngFor="let s of second;">
+                <div *ngIf="second.length!=0">
+                <div class="jumbotron jumbotron-fluid" *ngFor="let s of second; let i=index;" (click)="clicker_first(i,2)">
                     <div class="container">
                       <h5 class="display-5">{{s.title}}</h5>
                       <!-- <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p> -->
@@ -37,6 +49,15 @@
                       <h6 class="text-muted">For Date:{{s.for_date}}</h6><h6 class="text-muted">Date of notice:{{s.given_date}}</h6>
                     </div>
                   </div>
+                </div>
+                <div *ngIf="second.length==0">
+                    <div class="jumbotron jumbotron-fluid">
+                        <div class="container">
+                          <h4 class="display-5">No Notice</h4>
+                          <!-- <marquee behavior="scroll" direction="left">No Notice</marquee> -->
+                        </div>
+                      </div>
+                    </div>
             </div>
         </div>
     </div>
@@ -44,7 +65,8 @@
         <div class="card mx-4">
             <div class="card-body p-4">
                 <h3 class="card-title">3rd Year</h3>
-                <div class="jumbotron jumbotron-fluid" *ngFor="let t of third;">
+                <div *ngIf="third.length!=0">
+                <div class="jumbotron jumbotron-fluid" *ngFor="let t of third; let i=index;" (click)="clicker_first(i,3)">
                     <div class="container">
                       <h5 class="display-5">{{t.title}}</h5>
                       <!-- <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p> -->
@@ -52,6 +74,15 @@
                       <h6 class="text-muted">For Date:{{t.for_date}}</h6><h6 class="text-muted">Date of notice:{{t.given_date}}</h6>
                     </div>
                   </div>
+                </div>
+                <div *ngIf="third.length==0">
+                    <div class="jumbotron jumbotron-fluid">
+                        <div class="container">
+                          <h4 class="display-5">No Notice</h4>
+                          <!-- <marquee behavior="scroll" direction="left">No Notice</marquee> -->
+                        </div>
+                      </div>
+                    </div>
             </div>
         </div>
     </div>
@@ -59,7 +90,8 @@
         <div class="card mx-4">
             <div class="card-body p-4">
                 <h3 class="card-title">Final Year</h3>
-                <div class="jumbotron jumbotron-fluid" *ngFor="let f of final;">
+                <div *ngIf="final.length!=0">
+                <div class="jumbotron jumbotron-fluid" *ngFor="let f of final; let i=index;" (click)="clicker_first(i,4)">
                     <div class="container">
                       <h5 class="display-5">{{f.title}}</h5>
                       <!-- <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p> -->
@@ -67,6 +99,15 @@
                       <h6 class="text-muted">For Date:{{f.for_date}}</h6><h6 class="text-muted">Date of notice:{{f.given_date}}</h6>
                     </div>
                   </div>
+                </div>
+                <div *ngIf="final.length==0">
+                    <div class="jumbotron jumbotron-fluid">
+                        <div class="container">
+                          <h4 class="display-5">No Notice</h4>
+                          <!-- <marquee behavior="scroll" direction="left">No Notice</marquee> -->
+                        </div>
+                      </div>
+                    </div>
             </div>
         </div>
     </div>

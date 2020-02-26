@@ -33,6 +33,7 @@ import { StudentFeedbackComponent } from './student-feedback/student-feedback.co
 import { TestoneComponent } from './testone/testone.component';
 import { DeactivePageComponent } from './deactive-page/deactive-page.component';
 import { AddNoticeComponent } from './add-notice/add-notice.component';
+import { AdminmoodleComponent } from './adminmoodle/adminmoodle.component';
 
 
 var firebaseConfig = {
@@ -65,7 +66,8 @@ var routes:Routes=[
   {path:"adminsetting", component:AdminSettingComponent},
   {path:"testone", component:TestoneComponent},
   {path:"deactive", component:DeactivePageComponent},
-  {path:"newnotice", component:AddNoticeComponent}
+  {path:"newnotice", component:AddNoticeComponent},
+  {path:"adminmoodle", component:AdminmoodleComponent}
 ];
 @NgModule({
   declarations: [
@@ -90,7 +92,8 @@ var routes:Routes=[
     StudentFeedbackComponent,
     TestoneComponent,
     DeactivePageComponent,
-    AddNoticeComponent
+    AddNoticeComponent,
+    AdminmoodleComponent
   ],
   imports: [
     BrowserModule,
