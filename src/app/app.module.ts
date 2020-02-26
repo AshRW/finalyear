@@ -32,6 +32,7 @@ import { AdminSettingComponent } from './admin-setting/admin-setting.component';
 import { StudentFeedbackComponent } from './student-feedback/student-feedback.component';
 import { TestoneComponent } from './testone/testone.component';
 import { DeactivePageComponent } from './deactive-page/deactive-page.component';
+import { AddNoticeComponent } from './add-notice/add-notice.component';
 
 
 var firebaseConfig = {
@@ -63,7 +64,8 @@ var routes:Routes=[
   {path:"teacherchatlist", component:TeacherChatListComponent},
   {path:"adminsetting", component:AdminSettingComponent},
   {path:"testone", component:TestoneComponent},
-  {path:"deactive", component:DeactivePageComponent}
+  {path:"deactive", component:DeactivePageComponent},
+  {path:"newnotice", component:AddNoticeComponent}
 ];
 @NgModule({
   declarations: [
@@ -87,7 +89,8 @@ var routes:Routes=[
     AdminSettingComponent,
     StudentFeedbackComponent,
     TestoneComponent,
-    DeactivePageComponent
+    DeactivePageComponent,
+    AddNoticeComponent
   ],
   imports: [
     BrowserModule,

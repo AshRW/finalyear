@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FireserService } from '../services/fireser.service';
 import { BASE_URL } from '../base_url';
 import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-student-notice',
@@ -10,15 +11,27 @@ import Swal from 'sweetalert2';
 })
 export class StudentNoticeComponent implements OnInit {
 
-  constructor(private afd:FireserService) { }
+  constructor(private afd:FireserService, private router:Router) { }
+admin_status:any;
 date:any;
 time:any;
 activeNotice:any=[];
 public loading = false;
   ngOnInit() {
+    this.getLoginStatus();
     this.getTime();
     this.getActiveNotice();
+    this.dis();
+    
   }
+  getLoginStatus(){
+    this.admin_status=sessionStorage.getItem('key');
+  }
+
+  dis(){
+    console.log(this.admin_status)
+  }
+
   getTime(){
     this.loading=true;
     let myDate = new Date();
@@ -37,6 +50,9 @@ public loading = false;
       //console.log(this.activeNotice);
       this.loading=false;
     })
+  }
+  newNotice(){
+    this.router.navigateByUrl('/newnotice')
   }
 
   clicker(index:any){
