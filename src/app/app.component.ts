@@ -17,11 +17,14 @@ export class AppComponent implements OnInit, AfterContentChecked{
   session_data:any;
   logged=false;
   constructor(private router:Router, private afd:AngularFireDatabase, private notice:NoticeserService){}
+
   ngAfterContentChecked() {
-    this.status_check();
+    //this.status_check();
     this.check();
   }
+  
   // ngOnChanges(){
+  //   this.status_check();
   //   this.check();
   // }
   ngOnInit(){
@@ -70,6 +73,7 @@ export class AppComponent implements OnInit, AfterContentChecked{
   }
   loginas(){
     if(sessionStorage.length>0){
+      // this.status_check();
       this.session_data=JSON.parse(sessionStorage.getItem('key'))
     if(this.session_data.role=='student'){
       this.student=true;
