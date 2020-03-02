@@ -18,13 +18,12 @@ export class TestoneComponent implements OnInit {
 
   ngOnInit() {
   }
-  a=6;
+  
   fire(){
-    //this.router.navigateByUrl("/adminlogin");
     this.storage.uploadFile(this.selectedfile, this.selectedfilepath).subscribe(success=>{
       if(success.totalBytes==success.bytesTransferred){
         const key=this.afd.createPushId();
-        // this.userSer.addCause(key, this.editedCause);
+        
         Swal.fire({
           type: 'success',
           title: 'File Uploaded',
@@ -36,7 +35,7 @@ export class TestoneComponent implements OnInit {
   file(event){
     this.selectedfile=event.target.files[0];
     const key=this.afd.createPushId();
-    this.selectedfilepath='/tiral/'+key+'/'+this.selectedfile.name;
+    // this.selectedfilepath='/tiral/'+key+'/'+this.selectedfile.name;
+    this.selectedfilepath='/tiral/'+this.selectedfile.name;
   }
-
 }
