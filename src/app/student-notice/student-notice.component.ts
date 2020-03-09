@@ -29,7 +29,7 @@ public loading = false;
   }
 
   dis(){
-    console.log(this.admin_status)
+    console.log(this.admin_status);
   }
 
   getTime(){
@@ -45,9 +45,9 @@ public loading = false;
 
   getActiveNotice(){
     this.loading=true;
-    this.afd.pullList(BASE_URL+"data/notice/").snapshotChanges().subscribe(success=>{
+    this.afd.pullList("data/notice/").snapshotChanges().subscribe(success=>{
       this.activeNotice=snapshotToArray(success);
-      //console.log(this.activeNotice);
+      // console.log(this.activeNotice);
       this.loading=false;
     })
   }
