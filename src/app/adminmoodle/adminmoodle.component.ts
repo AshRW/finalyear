@@ -21,19 +21,25 @@ export class AdminmoodleComponent implements OnInit {
     this.getFolders();
   }
 
+  getFiles(){
+    console.log(this.display_list.file);
+  }
+
   getFolders(){
     this.loading=true;
     this.afd.pullList('data/moodle/folder/').snapshotChanges().subscribe(success=>{
       //console.log(this.afd.snapshotToArray2(success));
       this.display_list=this.afd.snapshotToArray2(success);
       this.main_list=this.afd.snapshotToArray2(success);
+      this.getFiles()
       this.loading=false;
     })
   }
+
   open_folder(index:any){
     console.log(this.display_list[index].folder);
     this.tracker=this.tracker+'/'+index;
-    console.log(this.tracker);
+    // console.log(this.tracker);
     this.display_list=this.display_list[index].folder;
     this.highest=false;
   }

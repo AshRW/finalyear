@@ -1,0 +1,2 @@
+Observing from the figure <Use case2.jpg> we see that there are three end users of this system and they have various diffirent tasks and functions depending on their role.
+Every educational institute 
