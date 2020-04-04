@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -35,6 +35,7 @@ import { DeactivePageComponent } from './deactive-page/deactive-page.component';
 import { AddNoticeComponent } from './add-notice/add-notice.component';
 import { AdminmoodleComponent } from './adminmoodle/adminmoodle.component';
 import { TesttwoComponent } from './testtwo/testtwo.component';
+import { TestthreeComponent } from './testthree/testthree.component';
 
 
 var firebaseConfig = {
@@ -69,7 +70,8 @@ var routes:Routes=[
   {path:"deactive", component:DeactivePageComponent},
   {path:"newnotice", component:AddNoticeComponent},
   {path:"adminmoodle", component:AdminmoodleComponent},
-  {path:"testtwo", component:TesttwoComponent}
+  {path:"testtwo", component:TesttwoComponent},
+  {path:"testthree", component:TestthreeComponent} 
 ];
 @NgModule({
   declarations: [
@@ -96,7 +98,8 @@ var routes:Routes=[
     DeactivePageComponent,
     AddNoticeComponent,
     AdminmoodleComponent,
-    TesttwoComponent
+    TesttwoComponent,
+    TestthreeComponent
   ],
   imports: [
     BrowserModule,

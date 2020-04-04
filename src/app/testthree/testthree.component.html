@@ -33,17 +33,16 @@
               </div> -->
 
               <div class="row">
-                <div class="col-sm-1" *ngFor="let dis of display_list; let i = index;">
-                  <div (dblclick)="open_folder(i);">
+                <div class="col-sm-1" *ngFor="let dis of moodle_data; let i = index;">
+                  <div (dblclick)="openFolder(i);">
                   <img src="../../assets/img/folder.svg" alt="folder_icon" sizes="5px" height="50px" width="50px"><br>{{dis.name}}</div>
                 </div>
-                <!-- <div *ngIf="display_list.files.length>0">
-                  <p>here</p>
-                <div class="col-sm-1" *ngFor="let dis1 of display_list.files; let i = index;">
-                  <div (dblclick)="open_file(i);">
+                <div *ngIf="file_data.length>0">
+                <div class="col-sm-1" *ngFor="let dis1 of file_data; let i = index;">
+                  <div (dblclick)="openFile(i);">
                   <img src="../../assets/img/file.png" alt="folder_icon" sizes="5px" height="50px" width="50px"><br>{{dis1.name}}</div>
                 </div>
-              </div> -->
+              </div>
             </div>
 
               </div>
