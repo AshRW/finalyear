@@ -1,5 +1,6 @@
 <div class="card">
     <main class="main d-flex align-items-center">
+      <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }" [template]="customLoadingTemplate"></ngx-loading>
       <div class="container-fluid">
 
             <div class="row">
@@ -12,7 +13,7 @@
                           </div>
                           <!-- <div class="progress">
                             <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                          </div>                     -->
+                          </div>-->
                   </div>
                   <!-- <h1>{{success.bytesTransferred}}/{{success.totalBytes}}</h1> -->
                   <button (click)="fire()">Done</button>

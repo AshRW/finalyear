@@ -12,6 +12,7 @@ export class TesttwoComponent implements OnInit {
   constructor(private afs:FirestoreService) { }
   selectedfile:any;
   selectedfilepath:any;
+  public loading=false;
   ngOnInit() {
   }
   file(event){
@@ -26,6 +27,7 @@ export class TesttwoComponent implements OnInit {
           title: 'File Uploaded',
           text: '1 file uploaded'
         })
+        
       }
     })
   }

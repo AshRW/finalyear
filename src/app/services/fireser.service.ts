@@ -12,7 +12,7 @@ export class FireserService {
   constructor(private auth: AngularFireAuth, private afd:AngularFireDatabase) { }
 
   push(path, data){
-    return this.afd.object(path).set(data);
+    return this.afd.object(BASE_URL+path).set(data);
   }
   test(){
     console.log("Fireser Service Works!");
