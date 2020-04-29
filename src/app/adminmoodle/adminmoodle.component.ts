@@ -11,10 +11,10 @@ import { BASE_URL } from '../base_url';
 export class AdminmoodleComponent implements OnInit {
   //Data Members
   public loading = false;
-  private display_list:any=[];
-  private main_list:any=[];
+  display_list:any=[];
+  main_list:any=[];
   public highest=true;
-  private tracker:any='';
+ tracker:any='';
 
   constructor(private afd:FireserService, private afd2:AngularFireDatabase) { }
   ngOnInit() {
@@ -23,6 +23,9 @@ export class AdminmoodleComponent implements OnInit {
 
   getFiles(){
     console.log(this.display_list.file);
+  }
+  back(){
+
   }
 
   getFolders(){

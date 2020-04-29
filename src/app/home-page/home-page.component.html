@@ -18,7 +18,7 @@
                 <div *ngIf="first.length!=0">
                 <div class="jumbotron jumbotron-fluid" *ngFor="let f of first; let i=index;" (click)="clicker_first(i,1)">
                     <div class="container">
-                      <h4 class="display-5">{{f.title}}</h4>
+                      <h5 class="display-5">{{f.title}}</h5>
                       <!-- <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p> -->
                       <marquee behavior="scroll" direction="left">{{f.desc}}</marquee>
                       <h6 class="text-muted">For Date:{{f.for_date}}</h6><h6 class="text-muted">Date of notice:{{f.given_date}}</h6>

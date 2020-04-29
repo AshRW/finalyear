@@ -71,7 +71,7 @@ openFolder(index:any){
 
     this.tracker=this.tracker+"/"+this.moodle_data[index].name;
     this.hardtracker=this.hardtracker+'/'+index+'/folder';
-    
+
     //trial
     this.storage[this.i]=this.moodle_data;
     this.i++;
@@ -83,7 +83,7 @@ openFolder(index:any){
 
     this.tracker=this.tracker+"/"+this.moodle_data[index].name;
     this.hardtracker=this.hardtracker+'/'+index+'/folder';
-    
+
     //trial
     this.storage[this.i]=this.moodle_data;
     this.i++;
@@ -111,14 +111,18 @@ else{
 openFile(index:any){
   let url:any;
   //file click function what to do when file is double clicked
-  console.log("moodle/"+this.file_data[index].file_location+'/'+this.file_data[index].name);
-  url=this.afs.downloadFile(this.file_data[index].file_location+'/'+this.file_data[index].name)
+  console.log("/moodle"+this.file_data[index].file_location+'/'+this.file_data[index].name);
+  this.afs.downloadFile('/moodle'+this.file_data[index].file_location+'/'+this.file_data[index].name).subscribe(success=>{
+url=success;
+Swal.fire(
+  this.file_data[index].name,
+  '<a href='+url+' target="_blank">Download</a>',
+  'info'
+)
+console.log(url)
+  }, error=>{console.log(error)})
   // Swal.fire({type:'info',title: ""});
-  Swal.fire(
-    this.file_data[index].name,
-    '<a href>'+url+'</a>',
-    'info'
-  )
+
 }
 
 
@@ -158,7 +162,7 @@ u={"name":this.selectedfile.name, "file_no":0, "file_location":this.tracker}
 this.afd.push("/data/moodle/folder/"+path+"/files/0/", u);
   }
   else{
-    console.log("else wala part aaya"); 
+    console.log("else wala part aaya");
 
 console.log("/data/moodle/folder"+path+"/files/"+previous_folder[path[path.length-1]].files.length+"/")
 u={"name":this.selectedfile.name, "file_no":previous_folder[path[path.length-1]].files.length, "file_location":this.tracker}
@@ -184,13 +188,21 @@ new_Folder(){
     path="data/moodle/folder"+this.hardtracker+"/0/";
     u={"folder_no":0, "name":this.form_data};
     this.afd.push(path,u)
+    window.location.reload()
   }
   else{
     //new folder along side existing
     path="data/moodle/folder"+this.hardtracker+"/"+this.moodle_data.length+"/";
     u={"folder_no":this.moodle_data.length, "name":this.form_data};
     this.afd.push(path,u)
+    console.log(path)
+    window.location.reload()
   }
+
+}
+showTracker(){
+  console.log('Hard: '+this.hardtracker)
+  console.log('Norm: '+this.tracker)
 }
 
 newFolderButton(){
