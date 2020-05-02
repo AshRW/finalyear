@@ -31,4 +31,7 @@ export class AdminService {
       this.router.navigateByUrl('/home');
     }
   }
+  fulladmin(){
+
+  }
 }

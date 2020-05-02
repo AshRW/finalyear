@@ -33,7 +33,7 @@ public active_notice:any=[];
     })
   }
 
-  
+
 }
 var snapshotToArray = function(snaps){
   var returnArr = [];

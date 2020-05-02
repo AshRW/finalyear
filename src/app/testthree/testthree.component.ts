@@ -1,3 +1,6 @@
+// TEST SUCCESSFUL TRANSFERED TO ADMIN MOODLE: WORKING
+
+
 import { Component, OnInit } from '@angular/core';
 import {FireserService} from '../services/fireser.service';
 import { FirestoreService } from '../services/firestore.service';

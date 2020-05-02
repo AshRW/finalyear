@@ -1,0 +1,62 @@
+<div class="app-body">
+  <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }"></ngx-loading>
+  <main class="main d-flex align-items-center">
+      <div class="container-fluid">
+          <div class="row">
+                <div class="col-md-6 mx-auto" *ngIf="auth_admin==true">
+                  <div class="card mx-4">
+                   <div class="card-body p-4">
+                     <h2 class="card-title">Add New Feedback Form</h2>
+                     <button *ngIf="newfeedbackbutton==false" type="button" class="btn btn-primary" (click)="newFeedbackButton()">New Feedback</button>
+                  <div *ngIf="newfeedbackbutton==true">
+                    <form [formGroup]="newFolderForm" class="form-inline">
+                      <input type="text" class="form-control mb-2 mr-sm-2" placeholder="FeedBack Name" formControlName="name" required>
+                      <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Feedback Link" formControlName="link" required>
+                      <label for="5">For Year</label>
+                        <select id="5" class="form-control" formControlName="for" required>
+                          <option *ngFor="let c of classListData" value="{{c.class}}">{{c.class}}</option>
+                        </select>
+                        <div class="row">
+                      <button type="button" class="btn btn-success" (click)="new_feedback()" [disabled]="!newFolderForm.valid">Add</button> &nbsp;
+                      <button type="button" class="btn btn-success" (click)="cancel()">Canel</button>
+                    </div>
+                    </form>
+                  </div>
+                    </div></div></div>
+
+                </div>
+                <div class="row">
+                  <div class="col mx-auto">
+                      <div class="card">
+                          <div class="card-body">
+                              <table class="table table-responsive-sm table-hover table-outline mb-0">
+                                  <thead class="thead-light">
+                                    <tr>
+                                      <th class="text-center">Sr no.</th>
+                                      <th class="text-center">Name</th>
+                                      <!-- <th class="text-center">Link</th> -->
+                                      <th class="text-center">Status</th>
+                                      <th class="text-center">Open</th>
+                                      <th class="text-center">Toggle</th>
+                                      <th class="text-center">Remove</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr  *ngFor="let a of activeFeedback; let i=index;" >
+                                      <td class="text-center">{{i+1}}</td>
+                                      <td class="text-center">{{a.name}}</td>
+                                      <!-- <td class="text-center">{{a.link}}</td> -->
+                                      <td class="text-center">{{a.status}}</td>
+                                      <td class="text-center"><button type="button" class="btn btn-primary" (click)="open(i)">Open</button></td>
+                                      <td class="text-center"><button type="button" class="btn btn-primary" (click)="toggle(i)">Toggle</button></td>
+                                      <td class="text-center"><button type="button" class="btn btn-primary" (click)="deleteFeedback(i)">Delete</button></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+                  </div>
+                </main>
+                </div>

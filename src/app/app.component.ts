@@ -3,8 +3,16 @@ import { Router } from '@angular/router';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { BASE_URL } from './base_url';
 import { NoticeserService } from './services/noticeser.service';
+import { Pipe, PipeTransform } from '@angular/core';
+import { DomSanitizer} from '@angular/platform-browser';
 
-
+@Pipe({ name: 'safe' })
+export class SafePipe implements PipeTransform {
+  constructor(private sanitizer: DomSanitizer) { }
+  transform(url) {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+  }
+}
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -22,7 +30,7 @@ export class AppComponent implements OnInit, AfterContentChecked{
     //this.status_check();
     this.check();
   }
-  
+
   // ngOnChanges(){
   //   this.status_check();
   //   this.check();
@@ -32,8 +40,11 @@ export class AppComponent implements OnInit, AfterContentChecked{
     this.check();
     // this.notice.getActiveNotice();
   }
-  
+
   title = 'mainproject';
+  goToFeedback(){
+    this.router.navigateByUrl("/feedbacklist")
+  }
   goToadmindash(){
     this.router.navigateByUrl("/admindash")
   }
@@ -88,7 +99,7 @@ export class AppComponent implements OnInit, AfterContentChecked{
     else if(this.session_data.role=='admin'){
       this.admin=true;
       this.teacher=false;
-      this.student=false;      
+      this.student=false;
     }
     else{
       this.teacher=false;
@@ -101,7 +112,7 @@ export class AppComponent implements OnInit, AfterContentChecked{
       this.student=false;
       this.admin=false;
     }
-    
+
   }
   goToMoodle(){
 this.router.navigateByUrl('/studentmoodle');

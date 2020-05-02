@@ -15,14 +15,39 @@ export class AdminDashboardComponent implements OnInit {
   constructor(private afd:AngularFireDatabase, private router:Router, private as:AdminService) {}
 student_data:any=[];
 teacher_data:any=[];
+sessiondata:any;
 //session_data:any;
   ngOnInit() {
     //this.checkLogin();
-    this.as.checkLogin();
-    this.getStudent();
-    this.getTeacher();
+    this.getSession();
   }
-  
+  getSession(){
+    if(sessionStorage.length>0){
+      // logged in
+      this.sessiondata=JSON.parse(sessionStorage.getItem('key'))
+      if(this.sessiondata.admin_access==true){
+        this.getStudent();
+        this.getTeacher();
+      }
+      else{
+        this.router.navigateByUrl('/home')
+      Swal.fire(
+        "You Do not have admin rights",
+        'You need admin rights, contact admin for info',
+        'info'
+      )
+      }
+    }else{
+      //not logged in
+      this.router.navigateByUrl('/home')
+      Swal.fire(
+        "Please Login First",
+        'Login to access this page',
+        'info'
+      )
+    }
+  }
+
   getStudent(){
     this.loading = true;
     this.afd.list(BASE_URL+'data/student/', ref=>ref.orderByChild('status').equalTo(false)).snapshotChanges().subscribe(success=>{

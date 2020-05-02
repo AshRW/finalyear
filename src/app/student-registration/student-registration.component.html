@@ -1,8 +1,8 @@
 <div class="app-body">
         <main class="main d-flex align-items-center">
 
-            <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }" [template]="customLoadingTemplate"></ngx-loading>
-          
+            <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }"></ngx-loading>
+
             <div class="container-fluid">
             <div class="row">
               <div class="col-md-6 mx-auto">
@@ -38,7 +38,7 @@
                           <option value="{{y}}" *ngFor="let y of level">{{y}}</option>
                         </select>
                         </div>
-                        
+
                         <div class="input-group mb-3" *ngIf="ins_type=='Engineering College'">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="icon-lock"></i></span>

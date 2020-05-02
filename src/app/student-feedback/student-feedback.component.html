@@ -1,1 +1,15 @@
-<p>student-feedback works!</p>
+<div class="app-body">
+  <main class="main d-flex align-items-center">
+    <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }"></ngx-loading>
+      <div class="container-fluid">
+      <div class="row">
+        <div class="col center_wala">
+          <iframe [src]="sourceURL | safe" width="640" height="1918" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </div>
+        </div>
+      </div>
+        </main>
+</div>
+
+
+
