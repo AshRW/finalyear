@@ -1,6 +1,9 @@
+<!-- TEST THREE COMPLETED, Transfered all code to adminmoodle -->
+
+
 <div class="app-body">
     <main class="main d-flex align-items-center">
-      <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }" [template]="customLoadingTemplate"></ngx-loading>
+      <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }"></ngx-loading>
         <div class="container-fluid">
         <div class="row">
           <div class="col-md-12 mx-auto">
@@ -10,27 +13,46 @@
                         <div class="card">
                           <div class="card-body" *ngIf='highest==true'>
                       <h5>In: Main Moodle</h5>
-                    </div> 
+                    </div>
                     <div class="card-body" *ngIf='highest==false'>
-                      <h5>In: {{display_list}} {{tracker}}</h5>
-                    </div> 
+                      <h5>In:{{tracker}}</h5>
+                    </div>
                   </div>
+                  <div class="row">
+
+                    <div class="col-sm-1">
                       <div *ngIf="highest==false">
                       <button type="button" class="btn btn-primary" (click)="back()">Back</button>
                     </div>
-                    </div>
-                    <hr/>
+                  </div>
 
-                  <!-- <div>
-                  <h5>
-                  <ul>
-                      <li (click)="func();">1st Year</li>
-                      <li>2nd Year</li>
-                      <li>3rd Year</li>
-                      <li>Final Year</li>
-                  </ul>
-                </h5>
-              </div> -->
+                  <div class="col-sm">
+                    <div *ngIf="highest==false">
+                      <!-- start -->
+                        <input type="file" (change)=file($event)/>
+                      <!-- end -->
+                    <button type="button" class="btn btn-primary" (click)="fire()">Upload File</button>
+                  </div>
+                </div>
+
+                <div class="col-sm">
+                  <div *ngIf="highest==false">
+                    <button *ngIf="newfolderbutton==false" type="button" class="btn btn-primary" (click)="newFolderButton()">New Folder</button>
+                    <div *ngIf="newfolderbutton==true">
+                      <form [formGroup]="newFolderForm" class="form-inline">
+                        <input type="text" class="form-control mb-2 mr-sm-2" placeholder="New Folder Name" formControlName="folder_name" required>
+                        <button type="button" class="btn btn-success" (click)="new_Folder()">+</button>
+                      </form>
+                    </div>
+                  </div>
+
+                </div>
+                <!-- <div>
+                  <button type="button" class="btn btn-primary" (click)="showTracker()">Show Tracker</button>
+                </div> -->
+                    </div>
+                  </div>
+                    <hr/>
 
               <div class="row">
                 <div class="col-sm-1" *ngFor="let dis of moodle_data; let i = index;">
@@ -38,11 +60,13 @@
                   <img src="../../assets/img/folder.svg" alt="folder_icon" sizes="5px" height="50px" width="50px"><br>{{dis.name}}</div>
                 </div>
                 <div *ngIf="file_data.length>0">
-                <div class="col-sm-1" *ngFor="let dis1 of file_data; let i = index;">
+                  <div class="row">
+                <div class="col-sm" *ngFor="let dis1 of file_data; let i = index;">
                   <div (dblclick)="openFile(i);">
                   <img src="../../assets/img/file.png" alt="folder_icon" sizes="5px" height="50px" width="50px"><br>{{dis1.name}}</div>
                 </div>
               </div>
+            </div>
             </div>
 
               </div>

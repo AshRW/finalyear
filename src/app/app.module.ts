@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Component } from '@angular/core';
+import { SafePipe } from './app.component';
+// import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -36,6 +39,7 @@ import { AddNoticeComponent } from './add-notice/add-notice.component';
 import { AdminmoodleComponent } from './adminmoodle/adminmoodle.component';
 import { TesttwoComponent } from './testtwo/testtwo.component';
 import { TestthreeComponent } from './testthree/testthree.component';
+import { FeedbackListComponent } from './feedback-list/feedback-list.component';
 
 
 var firebaseConfig = {
@@ -71,7 +75,9 @@ var routes:Routes=[
   {path:"newnotice", component:AddNoticeComponent},
   {path:"adminmoodle", component:AdminmoodleComponent},
   {path:"testtwo", component:TesttwoComponent},
-  {path:"testthree", component:TestthreeComponent} 
+  {path:"testthree", component:TestthreeComponent},
+  {path:"studentfeedback", component:StudentFeedbackComponent},
+  {path:"feedbacklist", component:FeedbackListComponent}
 ];
 @NgModule({
   declarations: [
@@ -99,7 +105,9 @@ var routes:Routes=[
     AddNoticeComponent,
     AdminmoodleComponent,
     TesttwoComponent,
-    TestthreeComponent
+    TestthreeComponent,
+    SafePipe,
+    FeedbackListComponent
   ],
   imports: [
     BrowserModule,
@@ -109,7 +117,7 @@ var routes:Routes=[
     AngularFireDatabaseModule,AngularFireAuthModule,
     AngularFireStorageModule,
     FormsModule, ReactiveFormsModule,
-    NgxLoadingModule.forRoot({})
+    NgxLoadingModule.forRoot({}),
   ],
   providers: [{
     provide: LocationStrategy,

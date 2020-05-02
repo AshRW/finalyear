@@ -1,1 +1,50 @@
-<p>add-notice works!</p>
+<div class="app-body">
+  <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }"></ngx-loading>
+  <main class="main d-flex align-items-center">
+      <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-7 center_wala">
+              <div class="card">
+                <div class="card-body">
+                  <form [formGroup]="noticeform">
+                    <h1>Add Notice</h1>
+                    <p class="text-muted">Fill this form to add a new notice</p>
+                    <!-- test -->
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="2">Title</label>
+                        <input type="text" class="form-control" id="2" placeholder="Title" formControlName="title" required>
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="4">Description</label>
+                        <input type="text" class="form-control" id="4" placeholder="Description" formControlName="desc" required>
+                      </div>
+                    </div>
+
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="5">For Year</label>
+                        <select id="5"class="form-control" formControlName="for" required>
+                          <option value="1st">1st Year</option>
+                          <option value="2nd">2nd Year</option>
+                          <option value="3rd">3rd Year</option>
+                          <option value="Final">Final Year</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="6">For Date</label>
+                        <input type="date" class="form-control" id="6" placeholder="Date" formControlName="for_date" required>
+                      </div>
+                    </div>
+                    <button [disabled]="!noticeform.valid" type="submit" class="btn btn-primary" (click)="button()">Sign in</button>
+                    <!-- <button type="submit" class="btn btn-primary" (click)="button()">Add Notice</button> -->
+                    <!-- test end -->
+                  </form>
+                </div>
+              </div>
+
+            </div>
+            </div>
+            </div>
+            </main>
+            </div>

@@ -3,6 +3,8 @@ import { FireserService } from '../services/fireser.service';
 import { BASE_URL } from '../base_url';
 import Swal from 'sweetalert2';
 import { Router } from '@angular/router';
+import { AngularFireDatabase } from '@angular/fire/database';
+
 
 @Component({
   selector: 'app-student-notice',
@@ -11,26 +13,39 @@ import { Router } from '@angular/router';
 })
 export class StudentNoticeComponent implements OnInit {
 
-  constructor(private afd:FireserService, private router:Router) { }
+  constructor(private afd:AngularFireDatabase, private router:Router) { }
 admin_status:any;
 date:any;
 time:any;
 activeNotice:any=[];
 public loading = false;
+sessiondata:any;
+auth_admin=false;
   ngOnInit() {
-    this.getLoginStatus();
-    this.getTime();
-    this.getActiveNotice();
-    this.dis();
-    
-  }
-  getLoginStatus(){
-    this.admin_status=sessionStorage.getItem('key');
+    this.getSession();
   }
 
-  dis(){
-    console.log(this.admin_status);
+  getSession(){
+    if(sessionStorage.length>0){
+      this.sessiondata=JSON.parse(sessionStorage.getItem('key'))
+      console.log("loggedIN")
+      // logged in
+      this.getTime();
+    this.getActiveNotice();
+    if(this.sessiondata.admin_access==true){
+      this.auth_admin=true
+    }
+    }else{
+      //not logged in
+      this.router.navigateByUrl('/home')
+      Swal.fire(
+        "Please Login First",
+        'Login to access this page',
+        'info'
+      )
+    }
   }
+
 
   getTime(){
     this.loading=true;
@@ -43,11 +58,19 @@ public loading = false;
     this.loading=false;
   }
 
+  // getActiveNotice(){     //Trial
+  //   this.loading=true;
+  //   this.afd.pullList("data/notice/").snapshotChanges().subscribe(success=>{
+  //     this.activeNotice=snapshotToArray(success);
+  //     // console.log(this.activeNotice);
+  //     this.loading=false;
+  //   })
+  // }
   getActiveNotice(){
     this.loading=true;
-    this.afd.pullList("data/notice/").snapshotChanges().subscribe(success=>{
-      this.activeNotice=snapshotToArray(success);
-      // console.log(this.activeNotice);
+    this.afd.list(BASE_URL+"data/notice/", ref=>ref.orderByChild('status').equalTo("active")).snapshotChanges().subscribe(success=>{
+      this.activeNotice=snapshotToArray(success)
+      console.log(snapshotToArray(success))
       this.loading=false;
     })
   }
@@ -58,6 +81,33 @@ public loading = false;
   clicker(index:any){
     // console.log("clicked")
     Swal.fire({type:'info',title: "Title: "+this.activeNotice[index].title+" \nDesc: "+this.activeNotice[index].desc, text:" \nGiven Date: "+this.activeNotice[index].given_date+", \nFor Date: "+this.activeNotice[index].for_date});
+  }
+  deleteNotice(i){Swal.fire({
+    title: 'Are you sure?',
+    text: "You won't be able to revert this!",
+    type: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Yes, delete it!'
+  }).then((result) => {
+    if (result.value) {
+    //console.log(BASE_URL+'date/notice/'+this.activeNotice[i].uid+'/')
+    this.afd.object(BASE_URL+'data/notice/'+this.activeNotice[i].uid+'/').remove().then(_=>
+      Swal.fire(
+      'Deleted!',
+      'Notice has been deleted',
+      'success'
+    ))
+
+    }
+  })
+
+
+  }
+  delcan(){
+    console.log("cancel");
+
   }
 
 }
