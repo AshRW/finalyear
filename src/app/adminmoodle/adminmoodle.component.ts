@@ -6,6 +6,7 @@ import { BASE_URL } from '../base_url';
 import Swal from 'sweetalert2';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { TransferService } from '../services/transfer.service';
 
 @Component({
   selector: 'app-adminmoodle',
@@ -15,7 +16,7 @@ import { Router } from '@angular/router';
 export class AdminmoodleComponent implements OnInit {
 
 
-  constructor(private afd:FireserService, private afs:FirestoreService, private router:Router) { }
+  constructor(private afd:FireserService, private afs:FirestoreService, private router:Router, private transfer:TransferService) { }
    //Form
    newFolderForm: any = new FormGroup({
     folder_name: new FormControl('', Validators.required)
@@ -51,19 +52,25 @@ selectedfile:any;
 selectedfilepath:any;
 //session
 sessiondata:any;
+//
+department:any;
 
 
   ngOnInit() {
   this.getSession();
 
   }
-
+  getTransferData(){
+    this.department= this.transfer.getObject();
+  }
   getSession(){
     if(sessionStorage.length>0){
       // logged in
       this.sessiondata=JSON.parse(sessionStorage.getItem('key'))
       if(this.sessiondata.admin_access==true){
+        this.getTransferData();
         this.getStuff();
+
       }
       else{
         this.router.navigateByUrl('/home')
@@ -86,7 +93,7 @@ sessiondata:any;
 
 getStuff(){
   this.loading=true;
-  this.afd.pullList('data/moodle/folder/').snapshotChanges().subscribe(success=>{
+  this.afd.pullList('data/moodle/'+this.department+'/folder/').snapshotChanges().subscribe(success=>{
     this.moodle_data=this.afd.snapshotToArray2(success);
     this.main_data=this.afd.snapshotToArray2(success);
     //console.log(this.main_data);
@@ -157,8 +164,8 @@ else{
 openFile(index:any){
   let url:any;
   //file click function what to do when file is double clicked
-  console.log("/moodle"+this.file_data[index].file_location+'/'+this.file_data[index].name);
-  this.afs.downloadFile('/moodle'+this.file_data[index].file_location+'/'+this.file_data[index].name).subscribe(success=>{
+  console.log("/moodle/"+this.department+this.file_data[index].file_location+'/'+this.file_data[index].name);
+  this.afs.downloadFile('/moodle/'+this.department+this.file_data[index].file_location+'/'+this.file_data[index].name).subscribe(success=>{
 url=success;
 Swal.fire(
   this.file_data[index].name,
@@ -174,7 +181,7 @@ console.log(url)
 
 file(event){
   this.selectedfile=event.target.files[0];
-  this.selectedfilepath="/moodle"+this.tracker+'/'+this.selectedfile.name;
+  this.selectedfilepath="/moodle/"+this.department+this.tracker+'/'+this.selectedfile.name;
   //console.log(this.selectedfilepath);
 }
 fire(){
@@ -203,17 +210,17 @@ fire(){
   // this.afd.push(path, u);
   if(previous_folder[path[path.length-1]].files==undefined){
 // console.log("undefined aaaya")
-console.log("/data/moodle/folder/"+path+"/files/0/")
+console.log("/data/moodle/"+this.department+"/folder/"+path+"/files/0/")
 u={"name":this.selectedfile.name, "file_no":0, "file_location":this.tracker}
-this.afd.push("/data/moodle/folder/"+path+"/files/0/", u);
+this.afd.push("/data/moodle/"+this.department+"/folder/"+path+"/files/0/", u);
   }
   else{
     console.log("else wala part aaya");
 
-console.log("/data/moodle/folder"+path+"/files/"+previous_folder[path[path.length-1]].files.length+"/")
+console.log("/data/moodle/"+this.department+"folder"+path+"/files/"+previous_folder[path[path.length-1]].files.length+"/")
 u={"name":this.selectedfile.name, "file_no":previous_folder[path[path.length-1]].files.length, "file_location":this.tracker}
 console.log(u);
-this.afd.push("/data/moodle/folder"+path+"/files/"+previous_folder[path[path.length-1]].files.length+"/", u);
+this.afd.push("/data/moodle/"+this.department+"folder"+path+"/files/"+previous_folder[path[path.length-1]].files.length+"/", u);
   }
       //end
     }
@@ -231,14 +238,14 @@ new_Folder(){
   if(this.moodle_data==undefined){
     //empty folder
     // console.log(this.hardtracker+"/0/")
-    path="data/moodle/folder"+this.hardtracker+"/0/";
+    path="data/moodle/"+this.department+"folder"+this.hardtracker+"/0/";
     u={"folder_no":0, "name":this.form_data};
     this.afd.push(path,u)
     window.location.reload()
   }
   else{
     //new folder along side existing
-    path="data/moodle/folder"+this.hardtracker+"/"+this.moodle_data.length+"/";
+    path="data/moodle/"+this.department+"folder"+this.hardtracker+"/"+this.moodle_data.length+"/";
     u={"folder_no":this.moodle_data.length, "name":this.form_data};
     this.afd.push(path,u)
     console.log(path)

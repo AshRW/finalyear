@@ -1,0 +1,473 @@
+{
+  "institute_type" : {
+    "College" : {
+      "Class" : [ "11th", "12th" ],
+      "department" : [ "Science", "Commerce", "Arts" ],
+      "level" : "Class"
+    },
+    "Engineering College" : {
+      "Year" : [ {
+        "class" : "1st"
+      }, {
+        "class" : "2nd"
+      }, {
+        "class" : "3rd"
+      }, {
+        "class" : "Final"
+      } ],
+      "department" : [ "CSE", "ETC", "MECH", "EE" ],
+      "level" : "Year"
+    },
+    "Management School" : {
+      "level" : "Year"
+    },
+    "School" : {
+      "Class" : [ "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th", "10th" ],
+      "level" : "Class"
+    }
+  },
+  "institutes" : {
+    "institute_id" : {
+      "data" : {
+        "admin" : {
+          "access" : "full",
+          "admin_access" : true,
+          "name" : "test",
+          "password" : "pass",
+          "role" : "admin"
+        },
+        "chat_data" : {
+          "chat_uid" : {
+            "data" : {
+              "-LpkSD_kRHrGFZ8yHH_h" : {
+                "date" : "27-8-2019",
+                "msg" : "hey",
+                "receiver" : "58ZVPY7EFHbPzPjzc8ZX4r8gXLc2",
+                "sender" : "3IarZhp5vxR6YfnVspC4VKvQFpE3",
+                "time" : "7:32"
+              },
+              "-LpkVNyoVUlClM2KjRLX" : {
+                "date" : "27-8-2019",
+                "msg" : "hey2",
+                "receiver" : "3IarZhp5vxR6YfnVspC4VKvQFpE3",
+                "sender" : "58ZVPY7EFHbPzPjzc8ZX4r8gXLc2",
+                "time" : "7:46"
+              },
+              "-LpktKhgAM77fHiisz_Q" : {
+                "date" : "27-8-2019",
+                "msg" : "hi",
+                "receiver" : "58ZVPY7EFHbPzPjzc8ZX4r8gXLc2",
+                "sender" : "3IarZhp5vxR6YfnVspC4VKvQFpE3",
+                "time" : "9:35"
+              },
+              "-LpktMOwLBUXlBG8G6vH" : {
+                "date" : "27-8-2019",
+                "msg" : "lol",
+                "receiver" : "3IarZhp5vxR6YfnVspC4VKvQFpE3",
+                "sender" : "58ZVPY7EFHbPzPjzc8ZX4r8gXLc2",
+                "time" : "9:35"
+              },
+              "-LplCEwgm1WxxbruM9em" : {
+                "date" : "27-8-2019",
+                "msg" : "123",
+                "receiver" : "3IarZhp5vxR6YfnVspC4VKvQFpE3",
+                "sender" : "58ZVPY7EFHbPzPjzc8ZX4r8gXLc2",
+                "time" : "11:2"
+              },
+              "-LplCHDD033fNgG3Pl2-" : {
+                "date" : "27-8-2019",
+                "msg" : "hi ",
+                "receiver" : "58ZVPY7EFHbPzPjzc8ZX4r8gXLc2",
+                "sender" : "3IarZhp5vxR6YfnVspC4VKvQFpE3",
+                "time" : "11:2"
+              },
+              "-LplQOjXmbDlmNuZ8h2o" : {
+                "date" : "27-8-2019",
+                "msg" : "hello",
+                "receiver" : "58ZVPY7EFHbPzPjzc8ZX4r8gXLc2",
+                "sender" : "3IarZhp5vxR6YfnVspC4VKvQFpE3",
+                "time" : "12:4"
+              },
+              "-LplQRDBW8HdfGHMtQEx" : {
+                "date" : "27-8-2019",
+                "msg" : "klk;",
+                "receiver" : "58ZVPY7EFHbPzPjzc8ZX4r8gXLc2",
+                "sender" : "3IarZhp5vxR6YfnVspC4VKvQFpE3",
+                "time" : "12:4"
+              },
+              "-LplSJKW0Bc-sW389pz3" : {
+                "date" : "27-8-2019",
+                "msg" : "lol",
+                "receiver" : "3IarZhp5vxR6YfnVspC4VKvQFpE3",
+                "sender" : "58ZVPY7EFHbPzPjzc8ZX4r8gXLc2",
+                "time" : "12:12"
+              },
+              "-LqVHFKi7gEIdD4qV0-j" : {
+                "date" : "6-9-2019",
+                "msg" : "yo1",
+                "receiver" : "58ZVPY7EFHbPzPjzc8ZX4r8gXLc2",
+                "sender" : "3IarZhp5vxR6YfnVspC4VKvQFpE3",
+                "time" : "14:26"
+              },
+              "-LvOu7mJ-G_rn7CV4gke" : {
+                "date" : "6-11-2019",
+                "msg" : "lol",
+                "receiver" : "58ZVPY7EFHbPzPjzc8ZX4r8gXLc2",
+                "sender" : "3IarZhp5vxR6YfnVspC4VKvQFpE3",
+                "time" : "12:2"
+              },
+              "-LvOu9KMgYKPxMiir1Ri" : {
+                "date" : "6-11-2019",
+                "msg" : "123",
+                "receiver" : "3IarZhp5vxR6YfnVspC4VKvQFpE3",
+                "sender" : "58ZVPY7EFHbPzPjzc8ZX4r8gXLc2",
+                "time" : "12:2"
+              },
+              "-LvOyIfTV8BLLfVfY_JV" : {
+                "date" : "6-11-2019",
+                "msg" : "hrllo",
+                "receiver" : "58ZVPY7EFHbPzPjzc8ZX4r8gXLc2",
+                "sender" : "3IarZhp5vxR6YfnVspC4VKvQFpE3",
+                "time" : "12:20"
+              },
+              "-LvP7pLNopAgWUgejPPI" : {
+                "date" : "6-11-2019",
+                "msg" : "6 dec 2019",
+                "receiver" : "58ZVPY7EFHbPzPjzc8ZX4r8gXLc2",
+                "sender" : "3IarZhp5vxR6YfnVspC4VKvQFpE3",
+                "time" : "13:6"
+              },
+              "-LvP7toN-T4tUrqB-exQ" : {
+                "date" : "6-11-2019",
+                "msg" : "6 dec 2019 from teacher",
+                "receiver" : "3IarZhp5vxR6YfnVspC4VKvQFpE3",
+                "sender" : "58ZVPY7EFHbPzPjzc8ZX4r8gXLc2",
+                "time" : "13:6"
+              },
+              "-LzFzwgtMeEqeUC0ZCRI" : {
+                "date" : "23-0-2020",
+                "msg" : "hello",
+                "receiver" : "3IarZhp5vxR6YfnVspC4VKvQFpE3",
+                "sender" : "58ZVPY7EFHbPzPjzc8ZX4r8gXLc2",
+                "time" : "11:33"
+              },
+              "-LzG-8hFf7xic1qpWX2I" : {
+                "date" : "23-0-2020",
+                "msg" : "23 jan",
+                "receiver" : "3IarZhp5vxR6YfnVspC4VKvQFpE3",
+                "sender" : "58ZVPY7EFHbPzPjzc8ZX4r8gXLc2",
+                "time" : "11:34"
+              },
+              "-LzG-DWsSglY-2R6qs_6" : {
+                "date" : "23-0-2020",
+                "msg" : "student hello",
+                "receiver" : "58ZVPY7EFHbPzPjzc8ZX4r8gXLc2",
+                "sender" : "3IarZhp5vxR6YfnVspC4VKvQFpE3",
+                "time" : "11:34"
+              }
+            },
+            "student_id" : "3IarZhp5vxR6YfnVspC4VKvQFpE3",
+            "teacher_id" : "58ZVPY7EFHbPzPjzc8ZX4r8gXLc2"
+          }
+        },
+        "class" : {
+          "department" : {
+            "CSE" : {
+              "1st" : {
+                "A" : {
+                  "class_teacher" : "teacher_id",
+                  "cr" : "some_student_id",
+                  "students" : [ "some_id", "some_id" ],
+                  "subjects" : [ "math", "subject", "df", "df", "fef" ]
+                }
+              },
+              "hod" : "some_id"
+            }
+          }
+        },
+        "feedback" : {
+          "-M6MVpMsolKBiNueWZdH" : {
+            "branch" : "CSE",
+            "for" : "2nd",
+            "link" : "https://docs.google.com/forms/d/e/1FAIpQLSffq0w3uCyY3l8CgUnGRP3T1d2sgFPiUc_2Hhv5XoUXB_NFxg/viewform?usp=sf_link",
+            "name" : "Copy of Working",
+            "status" : true,
+            "uid" : "-M6MVpMsolKBiNueWZdH"
+          },
+          "test_feedback_main" : {
+            "branch" : "CSE",
+            "for" : "1st",
+            "link" : "https://docs.google.com/forms/d/e/1FAIpQLSffq0w3uCyY3l8CgUnGRP3T1d2sgFPiUc_2Hhv5XoUXB_NFxg/viewform?usp=sf_link",
+            "name" : "Original Test Form @Google forms",
+            "status" : true,
+            "uid" : "test_feedback_main"
+          }
+        },
+        "moodle" : {
+          "folder" : [ {
+            "folder" : [ {
+              "folder_no" : 0,
+              "name" : "1st Sem"
+            }, {
+              "folder_no" : 1,
+              "name" : "2nd Sem"
+            } ],
+            "folder_no" : 0,
+            "name" : "1st Year"
+          }, {
+            "folder" : [ {
+              "folder_no" : 0,
+              "name" : "3rd Sem"
+            }, {
+              "folder_no" : 1,
+              "name" : "4th Sem"
+            } ],
+            "folder_no" : 1,
+            "name" : "2nd Year"
+          }, {
+            "folder" : [ {
+              "folder_no" : 0,
+              "name" : "5th Sem"
+            }, {
+              "folder_no" : 1,
+              "name" : "6th Sem"
+            } ],
+            "folder_no" : 2,
+            "name" : "3rd Year"
+          }, {
+            "folder" : [ {
+              "folder_no" : 0,
+              "name" : "7th Sem"
+            }, {
+              "folder" : [ {
+                "folder" : [ {
+                  "files" : [ {
+                    "file_location" : "/Final Year/8th Sem/CCC/PDFs",
+                    "file_no" : 0,
+                    "name" : "CCC UNIT-1.pdf"
+                  } ],
+                  "folder_no" : 0,
+                  "name" : "PDFs"
+                } ],
+                "folder_no" : 0,
+                "name" : "CCC"
+              }, {
+                "folder_no" : 1,
+                "name" : "DF"
+              }, {
+                "folder_no" : 2,
+                "name" : "DOS"
+              }, {
+                "folder_no" : 3,
+                "name" : "ICS"
+              } ],
+              "folder_no" : 1,
+              "name" : "8th Sem"
+            } ],
+            "folder_no" : 3,
+            "name" : "Final Year"
+          } ]
+        },
+        "notice" : {
+          "notice_id" : {
+            "by" : "admin",
+            "desc" : "Workshop class this week, be prepared with your tools",
+            "for" : "1st",
+            "for_date" : "10/5/2020",
+            "given_date" : "5/5/2020",
+            "status" : "active",
+            "title" : "WorkShop this week",
+            "uid" : "notice_id"
+          },
+          "notice_id2" : {
+            "by" : "admin",
+            "desc" : "preparation holiday for GATE exam for final year students",
+            "for" : "Final",
+            "for_date" : "8/5/2020",
+            "given_date" : "7/5/2020",
+            "status" : "active",
+            "title" : "GATE prep leave",
+            "uid" : "notice_id2"
+          },
+          "notice_id3" : {
+            "by" : "admin",
+            "desc" : "desc3",
+            "for" : "2nd",
+            "for_date" : "10/5/2020",
+            "given_date" : "9/5/2020",
+            "status" : "active",
+            "title" : "Industrial Visit @ TCS",
+            "uid" : "notice_id3"
+          },
+          "notice_id4" : {
+            "by" : "admin",
+            "desc" : "Winners will take home student of the year",
+            "for" : "3rd",
+            "for_date" : "15/5/2020",
+            "given_date" : "5/5/2020",
+            "status" : "active",
+            "title" : "InterCollege Competetion",
+            "uid" : "notice_id4"
+          }
+        },
+        "student" : {
+          "3IarZhp5vxR6YfnVspC4VKvQFpE3" : {
+            "class" : "1st",
+            "department" : "ETC",
+            "email" : "stu3@stu.com",
+            "name" : "stu3",
+            "password" : "stu3@stu.com",
+            "role" : "student",
+            "status" : true,
+            "uid" : "3IarZhp5vxR6YfnVspC4VKvQFpE3"
+          },
+          "47nGQbIGDXRPGxEoCzJWXBD7JAf1" : {
+            "class" : "3rd",
+            "department" : "ETC",
+            "email" : "student5@student.com",
+            "name" : "student",
+            "password" : "abcdefg",
+            "role" : "student",
+            "status" : true,
+            "uid" : "47nGQbIGDXRPGxEoCzJWXBD7JAf1"
+          },
+          "A11OXnBloLWdxZhcpQgHRbGfWJI2" : {
+            "class" : "1st",
+            "department" : "CSE",
+            "email" : "stu2@stu.com",
+            "name" : "stu2",
+            "password" : "ash123",
+            "role" : "student",
+            "status" : false,
+            "uid" : "A11OXnBloLWdxZhcpQgHRbGfWJI2"
+          },
+          "KTYXjixpVaXBFJQf6UM8fllNP0q2" : {
+            "class" : "2nd",
+            "department" : "MECH",
+            "email" : "student6@gmail.com",
+            "name" : "student6",
+            "password" : "student6",
+            "role" : "student",
+            "status" : false,
+            "uid" : "KTYXjixpVaXBFJQf6UM8fllNP0q2"
+          },
+          "MVW6q6J4OeVrZwQSTyoqGj6G3YM2" : {
+            "class" : "3rd",
+            "department" : "CSE",
+            "email" : "test_email@gmail.com",
+            "name" : "test_email@gmail.com",
+            "password" : "test_email@gmail.com",
+            "role" : "student",
+            "status" : false,
+            "uid" : "MVW6q6J4OeVrZwQSTyoqGj6G3YM2"
+          },
+          "Y5N5d3LoZMP6027D33cBWTaX1Vn1" : {
+            "class" : "1st",
+            "department" : "CSE",
+            "email" : "student_test@gmail.com",
+            "name" : "Test_student_1",
+            "password" : "ash123",
+            "role" : "student",
+            "status" : true,
+            "uid" : "Y5N5d3LoZMP6027D33cBWTaX1Vn1"
+          },
+          "Ym8l3rNczBU88Y2dVM8NdQZbzdq2" : {
+            "class" : "1st",
+            "department" : "CSE",
+            "email" : "ash@ash.com",
+            "name" : "ash",
+            "password" : "ash123",
+            "role" : "student",
+            "status" : true,
+            "uid" : "Ym8l3rNczBU88Y2dVM8NdQZbzdq2"
+          },
+          "pHB7rAfsmgUuxfBDCsY89PIaTEq1" : {
+            "class" : "1st",
+            "department" : "CSE",
+            "email" : "test2@gmail.com",
+            "name" : "test123",
+            "password" : "ash123",
+            "role" : "student",
+            "status" : true,
+            "uid" : "pHB7rAfsmgUuxfBDCsY89PIaTEq1"
+          },
+          "sh5uzwVmj7Mo5Da2Yw8aYk15vRG3" : {
+            "class" : "Final",
+            "department" : "CSE",
+            "email" : "anurag.wankhede@jit.org.in",
+            "name" : "anurag",
+            "password" : "anurag.wankhede@jit.org.in",
+            "role" : "student",
+            "status" : true,
+            "uid" : "sh5uzwVmj7Mo5Da2Yw8aYk15vRG3"
+          },
+          "unique_id" : {
+            "class" : "2nd",
+            "name" : "test_student_name",
+            "role" : "student",
+            "status" : true,
+            "uid" : "unique_id"
+          }
+        },
+        "teacher" : {
+          "58ZVPY7EFHbPzPjzc8ZX4r8gXLc2" : {
+            "admin_access" : false,
+            "email" : "teacher@teach.com",
+            "name" : "teach",
+            "password" : "ash123",
+            "role" : "teacher",
+            "status" : true,
+            "uid" : "58ZVPY7EFHbPzPjzc8ZX4r8gXLc2"
+          },
+          "80jOBvfm4nTNakavVbyN8qclXE12" : {
+            "admin_access" : false,
+            "email" : "teacher5@teacher.com",
+            "name" : "Teacher5",
+            "password" : "teacher5",
+            "role" : "teacher",
+            "status" : true,
+            "uid" : "80jOBvfm4nTNakavVbyN8qclXE12"
+          },
+          "IHh469g1fBQhWJV33H9bYXWx1c73" : {
+            "admin_access" : false,
+            "email" : "teacher3@teach.com",
+            "name" : "teach3",
+            "password" : "ash123",
+            "role" : "teacher",
+            "status" : true,
+            "uid" : "IHh469g1fBQhWJV33H9bYXWx1c73"
+          },
+          "iXm2IamCsWebnO7OSdc0bSrHR8n2" : {
+            "admin_access" : false,
+            "email" : "teacher2@teacher.com",
+            "name" : "Teacher2",
+            "password" : "ash123",
+            "role" : "teacher",
+            "status" : false,
+            "uid" : "iXm2IamCsWebnO7OSdc0bSrHR8n2"
+          },
+          "unique_id" : {
+            "admin_access" : false,
+            "class" : [ "1st", "2nd", "3rd" ],
+            "email" : "firstteacher@gmail.con",
+            "name" : "test_teacher_name",
+            "role" : "teacher",
+            "status" : true,
+            "subject" : [ "Engineering Math", "English" ],
+            "uid" : "unique_id"
+          }
+        }
+      },
+      "date" : "24-05-2020",
+      "ins_id" : "institute_id",
+      "ins_name" : "Jhulelal Institute of Technology",
+      "ins_type" : "Engineering College",
+      "status" : "active"
+    }
+  },
+  "super_admin" : {
+    "access" : "ultimate",
+    "password" : "superuser",
+    "username" : "cheatbot"
+  }
+}

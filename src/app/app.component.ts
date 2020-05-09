@@ -74,9 +74,8 @@ export class AppComponent implements OnInit, AfterContentChecked{
   status_check(){
     let status_a;
     this.afd.object(BASE_URL+'status/').snapshotChanges().subscribe(success=>{
-      //console.log(success.payload.val());
       status_a=success.payload.val();
-      //console.log(status_a);
+
       if(status_a!="active"){
         this.router.navigateByUrl('/deactive');
       }
@@ -118,7 +117,7 @@ export class AppComponent implements OnInit, AfterContentChecked{
 this.router.navigateByUrl('/studentmoodle');
   }
   gotoToAdminmoodle(){
-    this.router.navigateByUrl('/adminmoodle');
+    this.router.navigateByUrl('/adminmoodle_list');
   }
   goToNotice(){
 this.router.navigateByUrl('/studentnotice');
