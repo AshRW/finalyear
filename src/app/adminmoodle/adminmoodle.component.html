@@ -9,10 +9,10 @@
                   <div class="container">
                       <div class="card">
                         <div class="card-body" *ngIf='highest==true'>
-                    <h5>In: Main Moodle</h5>
+                    <h5>In: Main Moodle of {{department}}</h5>
                   </div>
                   <div class="card-body" *ngIf='highest==false'>
-                    <h5>In:{{tracker}}</h5>
+                    <h5>In:{{department}}{{tracker}}</h5>
                   </div>
                 </div>
                 <div class="row">

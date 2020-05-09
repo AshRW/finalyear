@@ -32,7 +32,7 @@ payload_data:any;
   getInsData(){
     this.loading=true;
 this.afd.object(BASE_URL).snapshotChanges().subscribe(success=>{
-  
+
   this.ins_data=success.payload.val();
   if(this.ins_data.ins_type=="Engineering College"){
     this.level_data="Year";
@@ -54,7 +54,7 @@ this.afd.object(BASE_URL).snapshotChanges().subscribe(success=>{
       this.loading=false;
     })
   }
-  
+
   getClassData(){
     this.afd.object(BASE_URL+"data/class/"+this.student_data.class+"/").snapshotChanges().subscribe(success=>{
       this.payload_data=success.payload.val();
@@ -95,7 +95,7 @@ this.afd.object(BASE_URL+"data/class/"+this.student_data.class+"/").snapshotChan
 this.router.navigateByUrl('/studentresult')
   }
   goToFeedback(){
-    this.router.navigateByUrl('/studentchatlist')
+    this.router.navigateByUrl('/feedbacklist_student')
   }
   goToApplicatio(){
     this.router.navigateByUrl('/studentchatlist');

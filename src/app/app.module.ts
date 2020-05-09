@@ -40,6 +40,8 @@ import { AdminmoodleComponent } from './adminmoodle/adminmoodle.component';
 import { TesttwoComponent } from './testtwo/testtwo.component';
 import { TestthreeComponent } from './testthree/testthree.component';
 import { FeedbackListComponent } from './feedback-list/feedback-list.component';
+import { FeedbacklistStudentComponent } from './feedbacklist-student/feedbacklist-student.component';
+import { AdminmoodleListComponent } from './adminmoodle-list/adminmoodle-list.component';
 
 
 var firebaseConfig = {
@@ -77,7 +79,9 @@ var routes:Routes=[
   {path:"testtwo", component:TesttwoComponent},
   {path:"testthree", component:TestthreeComponent},
   {path:"studentfeedback", component:StudentFeedbackComponent},
-  {path:"feedbacklist", component:FeedbackListComponent}
+  {path:"feedbacklist", component:FeedbackListComponent},
+  {path:"feedbacklist_student", component:FeedbacklistStudentComponent},
+  {path:"adminmoodle_list", component:AdminmoodleListComponent}
 ];
 @NgModule({
   declarations: [
@@ -107,7 +111,9 @@ var routes:Routes=[
     TesttwoComponent,
     TestthreeComponent,
     SafePipe,
-    FeedbackListComponent
+    FeedbackListComponent,
+    FeedbacklistStudentComponent,
+    AdminmoodleListComponent
   ],
   imports: [
     BrowserModule,

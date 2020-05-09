@@ -1,0 +1,19 @@
+<div class="app-body">
+  <main class="main d-flex align-items-center">
+    <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }"></ngx-loading>
+      <div class="container">
+      <div class="row" style="text-align: center;">
+        <div class="col-md" *ngFor="let d of department; let i=index;" >
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <img src="../../assets/img/circle_file.png" height="150px" width="150px" style="padding: 10px;">
+              <h2>{{d.key}} Moodle</h2>
+
+            </div>
+                <button type="button" class="btn btn-square btn-warning" (click)="goToMoodle(i)">OPEN</button>
+          </div>
+          </div>
+          </div>
+          </div>
+          </main>
+          </div>

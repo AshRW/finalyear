@@ -23,6 +23,9 @@ export class FireserService {
   pullListWithoutBase(path){
     return this.afd.list(path);
   }
+  pullListFilter(path, search_term, equalto){
+    return this.afd.list(BASE_URL+path, ref=>ref.orderByChild(search_term).equalTo(equalto))
+  }
   pullObject(path){
     return this.afd.object(BASE_URL+path);
   }
