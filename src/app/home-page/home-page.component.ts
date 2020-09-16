@@ -16,12 +16,19 @@ export class HomePageComponent implements OnInit {
   second:any=[];
   third:any=[];
   final:any=[];
-  public notice_data;any=[];
+  public notice_data:any=[];
+  public highlights:any=[];
   ngOnInit() {
     this.getInstitute();
     this.getNoticeData();
+    this.getHighlightData();
   }
-  
+  getHighlightData(){
+    this.afd.list(BASE_URL+'data/highlights/').snapshotChanges().subscribe(success=>{
+      this.highlights=snapshotToArray(success);
+      // console.log(this.highlights);
+    })
+  }
   getInstitute(){
     this.loading = true;
     this.afd.object(BASE_URL+'ins_name/').snapshotChanges().subscribe(success=>{
@@ -33,7 +40,7 @@ export class HomePageComponent implements OnInit {
   getNoticeData(){
     this.afd.list(BASE_URL+'data/notice/').snapshotChanges().subscribe(success=>{
       this.notice_data=snapshotToArray(success);
-      console.log(this.notice_data);
+      // console.log(this.notice_data);
       for(let i=0;i<this.notice_data.length;i++){
         if(this.notice_data[i].for=="1st")
         this.first.push(this.notice_data[i])
@@ -43,6 +50,13 @@ export class HomePageComponent implements OnInit {
         this.third.push(this.notice_data[i])
         else if(this.notice_data[i].for=="Final")
         this.final.push(this.notice_data[i])
+        else if (this.notice_data[i].for=="ALL_ALL"){
+          this.first.push(this.notice_data[i])
+          this.second.push(this.notice_data[i])
+          this.third.push(this.notice_data[i])
+          this.final.push(this.notice_data[i])
+
+        }
       }
     })
   }
@@ -87,6 +101,13 @@ export class HomePageComponent implements OnInit {
         break;
     }
     
+  }
+  clicker_second(index:any){
+    Swal.fire({
+      type:'info',
+      title: this.highlights[index].title, 
+      text:"Whats the News!: "+this.highlights[index].desc
+    });
   }
 
 

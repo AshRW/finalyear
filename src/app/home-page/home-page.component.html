@@ -9,14 +9,16 @@
         <br>
     </div>
 </div>
+<hr>
 <div class="row text-center">
+  <p><u>NOTICE:</u></p>
     <div class="col-sm">
         <div class="card mx-4">
             <div class="card-body p-4">
                 <h3 class="card-title">1st Year</h3>
                 <!-- *ngIf="first.length==0" -->
                 <div *ngIf="first.length!=0">
-                <div class="jumbotron jumbotron-fluid" *ngFor="let f of first; let i=index;" (click)="clicker_first(i,1)">
+                <div class="jumbotron jumbotron-fluid" *ngFor="let f of first; let i=index;" style="background-image: linear-gradient(rgb(255, 255, 255) , rgb(218, 218, 218));" (click)="clicker_first(i,1)">
                     <div class="container">
                       <h5 class="display-5">{{f.title}}</h5>
                       <!-- <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p> -->
@@ -41,7 +43,7 @@
             <div class="card-body p-4">
                 <h3 class="card-title">2nd Year</h3>
                 <div *ngIf="second.length!=0">
-                <div class="jumbotron jumbotron-fluid" *ngFor="let s of second; let i=index;" (click)="clicker_first(i,2)">
+                <div class="jumbotron jumbotron-fluid" *ngFor="let s of second; let i=index;" style="background-image: linear-gradient(rgb(255, 255, 255) , rgb(218, 218, 218));" (click)="clicker_first(i,2)">
                     <div class="container">
                       <h5 class="display-5">{{s.title}}</h5>
                       <!-- <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p> -->
@@ -66,7 +68,7 @@
             <div class="card-body p-4">
                 <h3 class="card-title">3rd Year</h3>
                 <div *ngIf="third.length!=0">
-                <div class="jumbotron jumbotron-fluid" *ngFor="let t of third; let i=index;" (click)="clicker_first(i,3)">
+                <div class="jumbotron jumbotron-fluid" *ngFor="let t of third; let i=index;" style="background-image: linear-gradient(rgb(255, 255, 255) , rgb(218, 218, 218));" (click)="clicker_first(i,3)">
                     <div class="container">
                       <h5 class="display-5">{{t.title}}</h5>
                       <!-- <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p> -->
@@ -91,7 +93,7 @@
             <div class="card-body p-4">
                 <h3 class="card-title">Final Year</h3>
                 <div *ngIf="final.length!=0">
-                <div class="jumbotron jumbotron-fluid" *ngFor="let f of final; let i=index;" (click)="clicker_first(i,4)">
+                <div class="jumbotron jumbotron-fluid" *ngFor="let f of final; let i=index;" style="background-image: linear-gradient(rgb(255, 255, 255) , rgb(218, 218, 218));" (click)="clicker_first(i,4)">
                     <div class="container">
                       <h5 class="display-5">{{f.title}}</h5>
                       <!-- <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p> -->
@@ -112,6 +114,25 @@
         </div>
     </div>
 </div>
+<!-- 1st row ends here -->
+<div class="row text-center">
+  <u><p>HIGHLIGHTS:</p></u>
+  <div class="col-sm">
+    <div class="card mx-4">
+        <div class="card-body p-4">
+          <h3 class="card-title" style="border: solid rgb(139, 199, 255);">College Highlights</h3>
+          <div class="jumbotron green_background jumbotron-fluid" style="text-align: left;" *ngFor="let f of highlights; let i=index;" (click)="clicker_second(i)">
+            <div class="container"><h2><b>{{i+1}}</b></h2>
+              <!-- <h5 class="display-5">{{f.title}}</h5> -->
+              <h2>{{f.title}}</h2>
+              <p class="lead">{{f.desc}}</p>
+            </div>
+          </div>
+</div>
+</div>
+</div>
+</div>
+<!-- 2nd row ends here -->
 </div>
 </main>
 </div>

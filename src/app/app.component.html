@@ -8,8 +8,17 @@
     <!-- CoreUI CSS -->
     <link rel="stylesheet" href="https://unpkg.com/@coreui/coreui/dist/css/coreui.min.css">
   </head>
-  <body class="app">
+  <body class="app"  style="background-image: linear-gradient(rgb(244, 255, 223) , rgb(237, 237, 237));">
+    <!-- lol -->
+    <div *ngIf="emergency!=null">
+      <div class="alert alert-danger" role="alert" style="text-align: center;">
+        <strong>{{emergency.title}} </strong>{{emergency.desc}}
+      </div>
+    </div>
+    
+    <!-- end -->
     <div class="card center_wala" style="width: 75%;">
+      
       <div class="card-body">
           <div class="row">
             <div class="col">

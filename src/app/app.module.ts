@@ -42,6 +42,7 @@ import { TestthreeComponent } from './testthree/testthree.component';
 import { FeedbackListComponent } from './feedback-list/feedback-list.component';
 import { FeedbacklistStudentComponent } from './feedbacklist-student/feedbacklist-student.component';
 import { AdminmoodleListComponent } from './adminmoodle-list/adminmoodle-list.component';
+import { TestfourComponent } from './testfour/testfour.component';
 
 
 var firebaseConfig = {
@@ -81,7 +82,8 @@ var routes:Routes=[
   {path:"studentfeedback", component:StudentFeedbackComponent},
   {path:"feedbacklist", component:FeedbackListComponent},
   {path:"feedbacklist_student", component:FeedbacklistStudentComponent},
-  {path:"adminmoodle_list", component:AdminmoodleListComponent}
+  {path:"adminmoodle_list", component:AdminmoodleListComponent},
+  {path:"test4", component:TestfourComponent}
 ];
 @NgModule({
   declarations: [
@@ -113,7 +115,8 @@ var routes:Routes=[
     SafePipe,
     FeedbackListComponent,
     FeedbacklistStudentComponent,
-    AdminmoodleListComponent
+    AdminmoodleListComponent,
+    TestfourComponent
   ],
   imports: [
     BrowserModule,

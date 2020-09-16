@@ -24,6 +24,7 @@ export class AppComponent implements OnInit, AfterContentChecked{
   admin=false;
   session_data:any;
   logged=false;
+  emergency:any;
   constructor(private router:Router, private afd:AngularFireDatabase, private notice:NoticeserService){}
 
   ngAfterContentChecked() {
@@ -38,7 +39,14 @@ export class AppComponent implements OnInit, AfterContentChecked{
   ngOnInit(){
     this.status_check();
     this.check();
+    this.getemergency();
     // this.notice.getActiveNotice();
+  }
+
+  getemergency(){
+    this.afd.object(BASE_URL+"data/emergency/").snapshotChanges().subscribe(success=>{
+      this.emergency=success.payload.val();
+    })
   }
 
   title = 'mainproject';

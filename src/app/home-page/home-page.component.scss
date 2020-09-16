@@ -8,3 +8,9 @@ h3 {
 .badge {
   border: solid rgb(139, 199, 255);
 }
+.green_background{
+  background-color: rgb(185, 255, 209);
+}
+#grad {
+  background-image: linear-gradient(to right, red , yellow);
+}
