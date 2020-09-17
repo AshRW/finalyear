@@ -19,6 +19,7 @@ export class FeedbackListComponent implements OnInit {
   sessiondata:any
   activeFeedback:any=[]
   classListData:any=[]
+  branchListData:any=[]
   ngOnInit() {
     this.loading=true
     this.getSession();
@@ -27,7 +28,8 @@ export class FeedbackListComponent implements OnInit {
   newFolderForm: any = new FormGroup({
     name: new FormControl('', Validators.required),
     link: new FormControl('', Validators.required),
-    for:  new FormControl('', Validators.required)
+    for:  new FormControl('', Validators.required),
+    branch: new FormControl('', Validators.required)
   });
   //session stuff
   getSession(){
@@ -72,7 +74,7 @@ export class FeedbackListComponent implements OnInit {
       "uid":key,
       "for":this.newFolderForm.value.for,
       "name":this.newFolderForm.value.name,
-      "link":this.newFolderForm.value.link, "status":true
+      "link":this.newFolderForm.value.link, "status":true, "branch":this.newFolderForm.value.branch
     }
     path="data/feedback/"+key+"/"
     this.afd.push(path,u).then(_=>{
@@ -104,6 +106,10 @@ export class FeedbackListComponent implements OnInit {
       type=success.payload.val();
       this.afd.pullListWithoutBase('institute_type/'+type+'/Year').snapshotChanges().subscribe(success=>{
         this.classListData=this.afd.snapshotToArray2(success)
+        this.afd.pullListWithoutBase('institute_type/'+type+'/department').snapshotChanges().subscribe(success=>{
+          // console.log(this.afd.snapshotToArray2(success))
+          this.branchListData=this.afd.snapshotToArray2(success);
+        })
       })
 
     })

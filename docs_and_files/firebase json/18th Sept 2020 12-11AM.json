@@ -1,0 +1,708 @@
+{
+  "institute_type" : {
+    "College" : {
+      "Class" : [ "11th", "12th" ],
+      "department" : [ "Science", "Commerce", "Arts" ],
+      "level" : "Class"
+    },
+    "Engineering College" : {
+      "Year" : [ {
+        "class" : "1st"
+      }, {
+        "class" : "2nd"
+      }, {
+        "class" : "3rd"
+      }, {
+        "class" : "Final"
+      } ],
+      "department" : [ {
+        "name" : "CSE"
+      }, {
+        "name" : "ETC"
+      }, {
+        "name" : "MECH"
+      }, {
+        "name" : "EE"
+      } ],
+      "level" : "Year"
+    },
+    "Management School" : {
+      "level" : "Year"
+    },
+    "School" : {
+      "Class" : [ "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th", "10th" ],
+      "level" : "Class"
+    }
+  },
+  "institutes" : {
+    "institute_id" : {
+      "data" : {
+        "admin" : {
+          "access" : "full",
+          "admin_access" : true,
+          "name" : "test",
+          "password" : "pass",
+          "role" : "admin"
+        },
+        "chat_data" : {
+          "chat_uid" : {
+            "data" : {
+              "-LpkSD_kRHrGFZ8yHH_h" : {
+                "date" : "27-8-2019",
+                "msg" : "hey",
+                "receiver" : "58ZVPY7EFHbPzPjzc8ZX4r8gXLc2",
+                "sender" : "3IarZhp5vxR6YfnVspC4VKvQFpE3",
+                "time" : "7:32"
+              },
+              "-LpkVNyoVUlClM2KjRLX" : {
+                "date" : "27-8-2019",
+                "msg" : "hey2",
+                "receiver" : "3IarZhp5vxR6YfnVspC4VKvQFpE3",
+                "sender" : "58ZVPY7EFHbPzPjzc8ZX4r8gXLc2",
+                "time" : "7:46"
+              },
+              "-LpktKhgAM77fHiisz_Q" : {
+                "date" : "27-8-2019",
+                "msg" : "hi",
+                "receiver" : "58ZVPY7EFHbPzPjzc8ZX4r8gXLc2",
+                "sender" : "3IarZhp5vxR6YfnVspC4VKvQFpE3",
+                "time" : "9:35"
+              },
+              "-LpktMOwLBUXlBG8G6vH" : {
+                "date" : "27-8-2019",
+                "msg" : "lol",
+                "receiver" : "3IarZhp5vxR6YfnVspC4VKvQFpE3",
+                "sender" : "58ZVPY7EFHbPzPjzc8ZX4r8gXLc2",
+                "time" : "9:35"
+              },
+              "-LplCEwgm1WxxbruM9em" : {
+                "date" : "27-8-2019",
+                "msg" : "123",
+                "receiver" : "3IarZhp5vxR6YfnVspC4VKvQFpE3",
+                "sender" : "58ZVPY7EFHbPzPjzc8ZX4r8gXLc2",
+                "time" : "11:2"
+              },
+              "-LplCHDD033fNgG3Pl2-" : {
+                "date" : "27-8-2019",
+                "msg" : "hi ",
+                "receiver" : "58ZVPY7EFHbPzPjzc8ZX4r8gXLc2",
+                "sender" : "3IarZhp5vxR6YfnVspC4VKvQFpE3",
+                "time" : "11:2"
+              },
+              "-LplQOjXmbDlmNuZ8h2o" : {
+                "date" : "27-8-2019",
+                "msg" : "hello",
+                "receiver" : "58ZVPY7EFHbPzPjzc8ZX4r8gXLc2",
+                "sender" : "3IarZhp5vxR6YfnVspC4VKvQFpE3",
+                "time" : "12:4"
+              },
+              "-LplQRDBW8HdfGHMtQEx" : {
+                "date" : "27-8-2019",
+                "msg" : "klk;",
+                "receiver" : "58ZVPY7EFHbPzPjzc8ZX4r8gXLc2",
+                "sender" : "3IarZhp5vxR6YfnVspC4VKvQFpE3",
+                "time" : "12:4"
+              },
+              "-LplSJKW0Bc-sW389pz3" : {
+                "date" : "27-8-2019",
+                "msg" : "lol",
+                "receiver" : "3IarZhp5vxR6YfnVspC4VKvQFpE3",
+                "sender" : "58ZVPY7EFHbPzPjzc8ZX4r8gXLc2",
+                "time" : "12:12"
+              },
+              "-LqVHFKi7gEIdD4qV0-j" : {
+                "date" : "6-9-2019",
+                "msg" : "yo1",
+                "receiver" : "58ZVPY7EFHbPzPjzc8ZX4r8gXLc2",
+                "sender" : "3IarZhp5vxR6YfnVspC4VKvQFpE3",
+                "time" : "14:26"
+              },
+              "-LvOu7mJ-G_rn7CV4gke" : {
+                "date" : "6-11-2019",
+                "msg" : "lol",
+                "receiver" : "58ZVPY7EFHbPzPjzc8ZX4r8gXLc2",
+                "sender" : "3IarZhp5vxR6YfnVspC4VKvQFpE3",
+                "time" : "12:2"
+              },
+              "-LvOu9KMgYKPxMiir1Ri" : {
+                "date" : "6-11-2019",
+                "msg" : "123",
+                "receiver" : "3IarZhp5vxR6YfnVspC4VKvQFpE3",
+                "sender" : "58ZVPY7EFHbPzPjzc8ZX4r8gXLc2",
+                "time" : "12:2"
+              },
+              "-LvOyIfTV8BLLfVfY_JV" : {
+                "date" : "6-11-2019",
+                "msg" : "hrllo",
+                "receiver" : "58ZVPY7EFHbPzPjzc8ZX4r8gXLc2",
+                "sender" : "3IarZhp5vxR6YfnVspC4VKvQFpE3",
+                "time" : "12:20"
+              },
+              "-LvP7pLNopAgWUgejPPI" : {
+                "date" : "6-11-2019",
+                "msg" : "6 dec 2019",
+                "receiver" : "58ZVPY7EFHbPzPjzc8ZX4r8gXLc2",
+                "sender" : "3IarZhp5vxR6YfnVspC4VKvQFpE3",
+                "time" : "13:6"
+              },
+              "-LvP7toN-T4tUrqB-exQ" : {
+                "date" : "6-11-2019",
+                "msg" : "6 dec 2019 from teacher",
+                "receiver" : "3IarZhp5vxR6YfnVspC4VKvQFpE3",
+                "sender" : "58ZVPY7EFHbPzPjzc8ZX4r8gXLc2",
+                "time" : "13:6"
+              },
+              "-LzFzwgtMeEqeUC0ZCRI" : {
+                "date" : "23-0-2020",
+                "msg" : "hello",
+                "receiver" : "3IarZhp5vxR6YfnVspC4VKvQFpE3",
+                "sender" : "58ZVPY7EFHbPzPjzc8ZX4r8gXLc2",
+                "time" : "11:33"
+              },
+              "-LzG-8hFf7xic1qpWX2I" : {
+                "date" : "23-0-2020",
+                "msg" : "23 jan",
+                "receiver" : "3IarZhp5vxR6YfnVspC4VKvQFpE3",
+                "sender" : "58ZVPY7EFHbPzPjzc8ZX4r8gXLc2",
+                "time" : "11:34"
+              },
+              "-LzG-DWsSglY-2R6qs_6" : {
+                "date" : "23-0-2020",
+                "msg" : "student hello",
+                "receiver" : "58ZVPY7EFHbPzPjzc8ZX4r8gXLc2",
+                "sender" : "3IarZhp5vxR6YfnVspC4VKvQFpE3",
+                "time" : "11:34"
+              }
+            },
+            "student_id" : "3IarZhp5vxR6YfnVspC4VKvQFpE3",
+            "teacher_id" : "58ZVPY7EFHbPzPjzc8ZX4r8gXLc2"
+          }
+        },
+        "class" : {
+          "department" : {
+            "CSE" : {
+              "1st" : {
+                "A" : {
+                  "class_teacher" : "teacher_id",
+                  "cr" : "some_student_id",
+                  "students" : [ "some_id", "some_id" ],
+                  "subjects" : [ "math", "subject", "df", "df", "fef" ]
+                }
+              },
+              "hod" : "some_id"
+            }
+          }
+        },
+        "emergency" : {
+          "desc" : "Students are adviced to stay home and do not go to gatherings until further notice by the gov of India",
+          "title" : "Covid-19 Alert"
+        },
+        "feedback" : {
+          "-M6MVpMsolKBiNueWZdH" : {
+            "branch" : "CSE",
+            "for" : "2nd",
+            "link" : "https://docs.google.com/forms/d/e/1FAIpQLSffq0w3uCyY3l8CgUnGRP3T1d2sgFPiUc_2Hhv5XoUXB_NFxg/viewform?usp=sf_link",
+            "name" : "Copy of Working",
+            "status" : true,
+            "uid" : "-M6MVpMsolKBiNueWZdH"
+          },
+          "-MHSEwZglAWVO_ovj8Aa" : {
+            "branch" : "CSE",
+            "for" : "Final",
+            "link" : "https://docs.google.com/forms/d/e/1FAIpQLSffq0w3uCyY3l8CgUnGRP3T1d2sgFPiUc_2Hhv5XoUXB_NFxg/viewform?usp=sf_link",
+            "name" : "Final year",
+            "status" : true,
+            "uid" : "-MHSEwZglAWVO_ovj8Aa"
+          },
+          "test_feedback_main" : {
+            "branch" : "CSE",
+            "for" : "1st",
+            "link" : "https://docs.google.com/forms/d/e/1FAIpQLSffq0w3uCyY3l8CgUnGRP3T1d2sgFPiUc_2Hhv5XoUXB_NFxg/viewform?usp=sf_link",
+            "name" : "Original Test Form @Google forms",
+            "status" : true,
+            "uid" : "test_feedback_main"
+          }
+        },
+        "highlights" : {
+          "id-123abc" : {
+            "desc" : "Mohan's major project group came with the most daring thought for the safety of the Country's Women. These guys made an app that secretly sends a text message to the close companions of the victim and alerts the police in case of any harassment or molestation. Just speak or shake the mobile a certain way and the message is sent!",
+            "status" : "active",
+            "title" : "CSE Final Year Student Group Makes a thoughtful app for Women Security!",
+            "uid" : "id-123abc"
+          },
+          "id-135addf" : {
+            "desc" : "Roshada’s Team made an incredible webapp to bring a whole city together for a cause. Anything that needs human volunteering can be hosted and completed here. Great place for volunteers, sponsors, and supporters. Can be deployed on the cities hosting and doesn’t need much maintenance to run!",
+            "status" : "active",
+            "title" : "Final year CSE - Group Brings City together for a cause with their amazing webapp!",
+            "uid" : "id-135addf"
+          },
+          "id-432gej" : {
+            "desc" : "Kalyani and Group have made an amazing device that is attachable to dustbins around the city and once the bin capacity reaches 75%, the device sends an alert to the responsible authorities about the filling bin.",
+            "status" : "active",
+            "title" : "CSE Major Project of Final Year Student bring us one step closer to Swatch Bharat Abhiyaan",
+            "uid" : "id-432gej"
+          },
+          "id-638bhs" : {
+            "desc" : "Abhishek’s Team made a great device along with the app for Water Wells that let the people dependant on the well know the water level in Real Time. This device is an IOT device so it doesn’t need a wired connection to anywhere.",
+            "status" : "active",
+            "title" : "Fellow Feeling ETC Students of Final Year make an electronic kit for the Wells!",
+            "uid" : "id-638bhs"
+          },
+          "id-837vuw" : {
+            "desc" : "Ankita and Group took email system to the next level by making an app for the blind community and accessing them mailing service without the need of another support! This app works only by voice and takes braille input too.",
+            "status" : "active",
+            "title" : "Philanthropic students of CSE Final Year made an app for the blind community",
+            "uid" : "id-837vuw"
+          }
+        },
+        "implink" : {
+          "id-123abc" : {
+            "dept" : "CSE",
+            "desc" : "Search Engine",
+            "link" : "https://www.google.com/",
+            "status" : true,
+            "title" : "Google Website",
+            "uid" : "id-123abc",
+            "year" : "Final"
+          },
+          "id-513sdg" : {
+            "dept" : "CSE",
+            "desc" : "External Meeting Link for google meet, final year",
+            "link" : "https://meet.google.com/gnu-rxiu-phk",
+            "status" : true,
+            "title" : "External Google Meet",
+            "uid" : "id-513sdg",
+            "year" : "Final"
+          }
+        },
+        "moodle" : {
+          "CSE" : {
+            "folder" : [ {
+              "folder" : [ {
+                "files" : [ {
+                  "file_location" : "/1st Year/1st Sem",
+                  "file_no" : 0,
+                  "name" : "anuz.jpg"
+                } ],
+                "folder_no" : 0,
+                "name" : "1st Sem"
+              }, {
+                "folder_no" : 1,
+                "name" : "2nd Sem"
+              } ],
+              "folder_no" : 0,
+              "name" : "1st Year"
+            }, {
+              "folder" : [ {
+                "folder_no" : 0,
+                "name" : "3rd Sem"
+              }, {
+                "folder_no" : 1,
+                "name" : "4th Sem"
+              } ],
+              "folder_no" : 1,
+              "name" : "2nd Year"
+            }, {
+              "folder" : [ {
+                "folder_no" : 0,
+                "name" : "5th Sem"
+              }, {
+                "folder_no" : 1,
+                "name" : "6th Sem"
+              } ],
+              "folder_no" : 2,
+              "name" : "3rd Year"
+            }, {
+              "folder" : [ {
+                "folder_no" : 0,
+                "name" : "7th Sem"
+              }, {
+                "folder_no" : 1,
+                "name" : "8th Sem"
+              } ],
+              "folder_no" : 3,
+              "name" : "Final Year"
+            } ]
+          },
+          "EE" : {
+            "folder" : [ {
+              "folder" : [ {
+                "folder_no" : 0,
+                "name" : "1st Sem"
+              }, {
+                "folder_no" : 1,
+                "name" : "2nd Sem"
+              } ],
+              "folder_no" : 0,
+              "name" : "1st Year"
+            }, {
+              "folder" : [ {
+                "folder_no" : 0,
+                "name" : "3rd Sem"
+              }, {
+                "folder_no" : 1,
+                "name" : "4th Sem"
+              } ],
+              "folder_no" : 1,
+              "name" : "2nd Year"
+            }, {
+              "folder" : [ {
+                "folder_no" : 0,
+                "name" : "5th Sem"
+              }, {
+                "folder_no" : 1,
+                "name" : "6th Sem"
+              } ],
+              "folder_no" : 2,
+              "name" : "3rd Year"
+            }, {
+              "folder" : [ {
+                "folder_no" : 0,
+                "name" : "7th Sem"
+              }, {
+                "folder_no" : 1,
+                "name" : "8th Sem"
+              } ],
+              "folder_no" : 3,
+              "name" : "Final Year"
+            } ]
+          },
+          "ETC" : {
+            "folder" : [ {
+              "folder" : [ {
+                "folder_no" : 0,
+                "name" : "1st Sem"
+              }, {
+                "folder_no" : 1,
+                "name" : "2nd Sem"
+              } ],
+              "folder_no" : 0,
+              "name" : "1st Year"
+            }, {
+              "folder" : [ {
+                "folder_no" : 0,
+                "name" : "3rd Sem"
+              }, {
+                "folder_no" : 1,
+                "name" : "4th Sem"
+              } ],
+              "folder_no" : 1,
+              "name" : "2nd Year"
+            }, {
+              "folder" : [ {
+                "folder_no" : 0,
+                "name" : "5th Sem"
+              }, {
+                "folder_no" : 1,
+                "name" : "6th Sem"
+              } ],
+              "folder_no" : 2,
+              "name" : "3rd Year"
+            }, {
+              "folder" : [ {
+                "folder_no" : 0,
+                "name" : "7th Sem"
+              }, {
+                "folder_no" : 1,
+                "name" : "8th Sem"
+              } ],
+              "folder_no" : 3,
+              "name" : "Final Year"
+            } ]
+          },
+          "MECH" : {
+            "folder" : [ {
+              "folder" : [ {
+                "folder_no" : 0,
+                "name" : "1st Sem"
+              }, {
+                "folder_no" : 1,
+                "name" : "2nd Sem"
+              } ],
+              "folder_no" : 0,
+              "name" : "1st Year"
+            }, {
+              "folder" : [ {
+                "folder_no" : 0,
+                "name" : "3rd Sem"
+              }, {
+                "folder_no" : 1,
+                "name" : "4th Sem"
+              } ],
+              "folder_no" : 1,
+              "name" : "2nd Year"
+            }, {
+              "folder" : [ {
+                "folder_no" : 0,
+                "name" : "5th Sem"
+              }, {
+                "folder_no" : 1,
+                "name" : "6th Sem"
+              } ],
+              "folder_no" : 2,
+              "name" : "3rd Year"
+            }, {
+              "folder" : [ {
+                "folder_no" : 0,
+                "name" : "7th Sem"
+              }, {
+                "folder_no" : 1,
+                "name" : "8th Sem"
+              } ],
+              "folder_no" : 3,
+              "name" : "Final Year"
+            } ]
+          }
+        },
+        "notice" : {
+          "-M7xCFEcbzAMKnDV1Yxh" : {
+            "by" : "admin",
+            "desc" : "Stay Home, Stay Safe. Classes will be continued Online through Google Meet",
+            "for" : "ALL_ALL",
+            "for_date" : "01/05/2020",
+            "given_date" : "22/05/2020",
+            "status" : "active",
+            "title" : "CoronaVirus Alert",
+            "uid" : "-M7xCFEcbzAMKnDV1Yxh"
+          },
+          "id-146adg" : {
+            "by" : "admin",
+            "desc" : "As Directed by UGC, Final Year Students will give Exams but only online as the pandemic is on the roll. Stay Safe",
+            "for" : "Final",
+            "for_date" : "15/09/2020",
+            "given_date" : "10/09/2020",
+            "title" : "Final Year Exams - Online",
+            "uid" : "id-146adg"
+          }
+        },
+        "placement" : {
+          "id-123adf" : {
+            "company" : "Genesis Pvt. Ltd.",
+            "link" : "https://firebasestorage.googleapis.com/v0/b/final-year-2fffe.appspot.com/o/data%2Fplacement%2Fabhi.jpg?alt=media&token=55980276-b824-45d1-b5b0-1f14ac7a2f23",
+            "name" : "Abhishek G",
+            "status" : "active",
+            "uid" : "id-123adf"
+          },
+          "id-123dhs" : {
+            "company" : "Xoriant Pvt. Ltd.",
+            "link" : "https://firebasestorage.googleapis.com/v0/b/final-year-2fffe.appspot.com/o/data%2Fplacement%2Frosh.jpg?alt=media&token=0455b464-7c68-4cd8-828f-ffd25684b059",
+            "name" : "Roshada A",
+            "status" : "active",
+            "uid" : "id-123dhs"
+          },
+          "id-124fgr" : {
+            "company" : "TCS",
+            "link" : "https://firebasestorage.googleapis.com/v0/b/final-year-2fffe.appspot.com/o/data%2Fplacement%2Fmohan.jpg?alt=media&token=bba626d6-30d8-42fa-baa2-283574bf662a",
+            "name" : "Mohan N",
+            "status" : "active",
+            "uid" : "id-124fgr"
+          },
+          "id-549hde" : {
+            "company" : "N/A",
+            "link" : "https://firebasestorage.googleapis.com/v0/b/final-year-2fffe.appspot.com/o/data%2Fplacement%2Fanurag.jpg?alt=media&token=f54cdc0e-417c-45ff-a2a3-e1aa2fac1e45",
+            "name" : "Anurag RW",
+            "status" : "active",
+            "uid" : "id-549hde"
+          },
+          "id-635ekg" : {
+            "company" : "Collabera",
+            "link" : "https://firebasestorage.googleapis.com/v0/b/final-year-2fffe.appspot.com/o/data%2Fplacement%2Fanuz.jpg?alt=media&token=e3badbcb-c014-4eab-b7cb-638102dd1b9e",
+            "name" : "Anuj S",
+            "status" : "Active",
+            "uid" : "id-635ekg"
+          },
+          "id-665hhf" : {
+            "company" : "Coditas",
+            "link" : "https://firebasestorage.googleapis.com/v0/b/final-year-2fffe.appspot.com/o/data%2Fplacement%2Frahul.jpg?alt=media&token=a2c489dd-9d52-46c5-9001-ca9f1904b581",
+            "name" : "Rahul P",
+            "status" : "active",
+            "uid" : "id-665hhf"
+          },
+          "id-838nhf" : {
+            "company" : "Talentio",
+            "link" : "https://firebasestorage.googleapis.com/v0/b/final-year-2fffe.appspot.com/o/data%2Fplacement%2Fashu.jpg?alt=media&token=965223ca-a416-4382-b101-93f70e8a4bb6",
+            "name" : "Ashutosh P",
+            "status" : "active",
+            "uid" : "id-838nhf"
+          }
+        },
+        "showvideo" : {
+          "id-123asd" : {
+            "footer" : "A Decade of Excellence",
+            "link" : "https://www.youtube.com/embed/lJqsebLP5j8",
+            "status" : "active",
+            "title" : "10th Anniversary of JGI ",
+            "uid" : "id-123asd"
+          }
+        },
+        "student" : {
+          "3IarZhp5vxR6YfnVspC4VKvQFpE3" : {
+            "class" : "1st",
+            "department" : "ETC",
+            "email" : "stu3@stu.com",
+            "name" : "stu3",
+            "password" : "stu3@stu.com",
+            "role" : "student",
+            "status" : true,
+            "uid" : "3IarZhp5vxR6YfnVspC4VKvQFpE3"
+          },
+          "47nGQbIGDXRPGxEoCzJWXBD7JAf1" : {
+            "class" : "3rd",
+            "department" : "ETC",
+            "email" : "student5@student.com",
+            "name" : "student",
+            "password" : "abcdefg",
+            "role" : "student",
+            "status" : true,
+            "uid" : "47nGQbIGDXRPGxEoCzJWXBD7JAf1"
+          },
+          "A11OXnBloLWdxZhcpQgHRbGfWJI2" : {
+            "class" : "1st",
+            "department" : "CSE",
+            "email" : "stu2@stu.com",
+            "name" : "stu2",
+            "password" : "ash123",
+            "role" : "student",
+            "status" : false,
+            "uid" : "A11OXnBloLWdxZhcpQgHRbGfWJI2"
+          },
+          "KTYXjixpVaXBFJQf6UM8fllNP0q2" : {
+            "class" : "2nd",
+            "department" : "MECH",
+            "email" : "student6@gmail.com",
+            "name" : "student6",
+            "password" : "student6",
+            "role" : "student",
+            "status" : false,
+            "uid" : "KTYXjixpVaXBFJQf6UM8fllNP0q2"
+          },
+          "MVW6q6J4OeVrZwQSTyoqGj6G3YM2" : {
+            "class" : "3rd",
+            "department" : "CSE",
+            "email" : "test_email@gmail.com",
+            "name" : "test_email@gmail.com",
+            "password" : "test_email@gmail.com",
+            "role" : "student",
+            "status" : false,
+            "uid" : "MVW6q6J4OeVrZwQSTyoqGj6G3YM2"
+          },
+          "Mo6CqReYlaWz2hE5n378jjN6akA2" : {
+            "class" : "Final",
+            "department" : "CSE",
+            "email" : "anuragwankhede@gmail.com",
+            "name" : "Anurag RW",
+            "password" : "anu123",
+            "role" : "student",
+            "status" : true,
+            "uid" : "Mo6CqReYlaWz2hE5n378jjN6akA2"
+          },
+          "Y5N5d3LoZMP6027D33cBWTaX1Vn1" : {
+            "class" : "1st",
+            "department" : "CSE",
+            "email" : "student_test@gmail.com",
+            "name" : "Test_student_1",
+            "password" : "ash123",
+            "role" : "student",
+            "status" : true,
+            "uid" : "Y5N5d3LoZMP6027D33cBWTaX1Vn1"
+          },
+          "Ym8l3rNczBU88Y2dVM8NdQZbzdq2" : {
+            "class" : "1st",
+            "department" : "CSE",
+            "email" : "ash@ash.com",
+            "name" : "ash",
+            "password" : "ash123",
+            "role" : "student",
+            "status" : true,
+            "uid" : "Ym8l3rNczBU88Y2dVM8NdQZbzdq2"
+          },
+          "pHB7rAfsmgUuxfBDCsY89PIaTEq1" : {
+            "class" : "1st",
+            "department" : "CSE",
+            "email" : "test2@gmail.com",
+            "name" : "test123",
+            "password" : "ash123",
+            "role" : "student",
+            "status" : true,
+            "uid" : "pHB7rAfsmgUuxfBDCsY89PIaTEq1"
+          },
+          "sh5uzwVmj7Mo5Da2Yw8aYk15vRG3" : {
+            "class" : "Final",
+            "department" : "CSE",
+            "email" : "anurag.wankhede@jit.org.in",
+            "name" : "anurag",
+            "password" : "anurag.wankhede@jit.org.in",
+            "role" : "student",
+            "status" : true,
+            "uid" : "sh5uzwVmj7Mo5Da2Yw8aYk15vRG3"
+          },
+          "unique_id" : {
+            "class" : "2nd",
+            "name" : "test_student_name",
+            "role" : "student",
+            "status" : true,
+            "uid" : "unique_id"
+          }
+        },
+        "teacher" : {
+          "58ZVPY7EFHbPzPjzc8ZX4r8gXLc2" : {
+            "admin_access" : true,
+            "email" : "teacher@teach.com",
+            "name" : "teach",
+            "password" : "teacher@teach.com",
+            "role" : "teacher",
+            "status" : true,
+            "uid" : "58ZVPY7EFHbPzPjzc8ZX4r8gXLc2"
+          },
+          "80jOBvfm4nTNakavVbyN8qclXE12" : {
+            "admin_access" : false,
+            "email" : "teacher5@teacher.com",
+            "name" : "Teacher5",
+            "password" : "teacher5",
+            "role" : "teacher",
+            "status" : true,
+            "uid" : "80jOBvfm4nTNakavVbyN8qclXE12"
+          },
+          "IHh469g1fBQhWJV33H9bYXWx1c73" : {
+            "admin_access" : false,
+            "email" : "teacher3@teach.com",
+            "name" : "teach3",
+            "password" : "ash123",
+            "role" : "teacher",
+            "status" : true,
+            "uid" : "IHh469g1fBQhWJV33H9bYXWx1c73"
+          },
+          "iXm2IamCsWebnO7OSdc0bSrHR8n2" : {
+            "admin_access" : false,
+            "email" : "teacher2@teacher.com",
+            "name" : "Teacher2",
+            "password" : "ash123",
+            "role" : "teacher",
+            "status" : false,
+            "uid" : "iXm2IamCsWebnO7OSdc0bSrHR8n2"
+          },
+          "unique_id" : {
+            "admin_access" : false,
+            "class" : [ "1st", "2nd", "3rd" ],
+            "email" : "firstteacher@gmail.con",
+            "name" : "test_teacher_name",
+            "role" : "teacher",
+            "status" : true,
+            "subject" : [ "Engineering Math", "English" ],
+            "uid" : "unique_id"
+          }
+        }
+      },
+      "date" : "24-05-2020",
+      "ins_id" : "institute_id",
+      "ins_name" : "Jhulelal Institute of Technology",
+      "ins_type" : "Engineering College",
+      "status" : "active"
+    }
+  },
+  "super_admin" : {
+    "access" : "ultimate",
+    "password" : "root",
+    "username" : "admin"
+  }
+}

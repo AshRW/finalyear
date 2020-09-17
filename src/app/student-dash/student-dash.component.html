@@ -1,65 +1,47 @@
 <div class="app-body">
-    <main class="main d-flex align-items-center">
-            <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }"></ngx-loading>
+  <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }"></ngx-loading>
+  <main class="main d-flex align-items-center">
       <div class="container-fluid">
-          <div class="card"><div class="card-body">
-            <div class="row">
-                    <div class="col">
-                      <div class="callout callout-info b-t-1 b-r-1 b-b-1">
-                        <small class="text-muted">Name</small><br>
-                        <strong class="h4">{{student_data.name}}</strong>
-                      </div>
-                    </div><!--/.col-->
-                    <div class="col">
-                      <div class="callout callout-danger b-t-1 b-r-1 b-b-1">
-                        <small class="text-muted">Email</small><br>
-                        <strong class="h4">{{student_data.email}}</strong>
-                      </div>
-                    </div><!--/.col-->
-                    <div class="col">
-                      <div class="callout callout-warning b-t-1 b-r-1 b-b-1">
-                        <small class="text-muted">{{level_data}}</small><br>
-                        <strong class="h4">{{student_data.class}}</strong>
-                      </div>
-                    </div><!--/.col-->
-                    <div class="col">
-                      <div class="callout callout-success b-t-1 b-r-1 b-b-1">
-                        <small class="text-muted">Department</small><br>
-                        <strong class="h4">{{student_data.department}}</strong>
-                      </div>
-                    </div><!--/.col-->
-                    <div class="col">
-                        <div class="callout callout-success b-t-1 b-r-1 b-b-1">
-                          <small class="text-muted">Class Teacher</small><br>
-                          <strong class="h4">{{student_data.teacher_name}}</strong>
-                        </div>
-                      </div><!--/.col-->
-                  </div><!--/.row-->
-                  <div class="row">
-                    <div class="col">
-                        <div class="jumbotron jumbotron-fluid">
-                            <div class="container">
-                              <h1 class="display-5">{{ins_data.ins_name}}</h1>
-                              <p class="lead">{{ins_data.ins_type}}</p>
-                            </div>
-                          </div>
-                    </div>
-                  </div>
-        <div class="row" style="text-align: center">
-          <div class="col" style="padding: 2%">
-            <button type="button" class="btn btn-pill btn-info" (click)="goToResult()">Results</button>
-        </div>
-        <div class="col" style="padding: 2%">
-          <button type="button" class="btn btn-pill btn-info" (click)="goToFeedback()">FeedBack</button>
+        <!-- ROW 1 -->
+          <div class="row">
+           <div class="col-lg mx-auto">
+             <!-- card -->
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Student's Dashboard</h5>
+                <p class="card-text">Get all your work done here</p>
+                <p>Name: <b>{{session_data.name}}</b> | Email: <b>{{session_data.email}}</b> | Department: <b>{{session_data.department}}</b></p>
+                <!-- jumbo -->
+                <div class="jumbotron" *ngIf="ins_data!=null">
+                  <h1 class="display-4">{{ins_data.ins_name}}</h1>
+                  <p class="lead">Simplecademy</p>
+                  <hr class="my-4">
+                  <p>{{ins_data.ins_type}}</p>
+                </div>
+                <!-- jumbo ends -->
+              </div>
+            </div>
+            <!-- card ends -->
+</div>
+</div>
+<!-- ROW 1 ENDS -->
+
+<!-- ROW 2 -->
+<div class="row text-center">
+  <div class="col-lg mx-auto">
+    <button type="button" class="btn btn-primary btn-lg" (click)="goToChat();">Chat</button>
+    </div>
+    <div class="col-lg mx-auto">
+      <button type="button" class="btn btn-primary btn-lg" (click)="goToMoodle();">Moodle</button>
       </div>
-      <div class="col" style="padding: 2%">
-        <button type="button" class="btn btn-pill btn-info" (click)="goToApplicatio()">Application</button>
+      <div class="col-lg mx-auto">
+        <button type="button" class="btn btn-primary btn-lg" (click)="goToFeedback();">Feedback</button>
+        </div>
+        <div class="col-lg mx-auto">
+          <button type="button" class="btn btn-primary btn-lg" (click)="goToImplinks();">IMP Links</button>
+          </div>
     </div>
-    <div class="col" style="padding: 2%">
-      <button type="button" class="btn btn-pill btn-info" (click)="goToChat()">Chat</button>
-  </div>
-    </div>
-  </div></div>
-    </div>
-    </main>
-    </div>
+<!-- ROW 2 Ends here -->
+</div>
+</main>
+</div>

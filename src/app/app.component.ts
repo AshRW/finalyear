@@ -99,9 +99,17 @@ export class AppComponent implements OnInit, AfterContentChecked{
       this.admin=false;
     }
     else if(this.session_data.role=='teacher'){
+      if(this.session_data.admin_access==true){
+      this.teacher=true;
+      this.student=false;
+      this.admin=true;
+      }
+      else{
       this.teacher=true;
       this.student=false;
       this.admin=false;
+      }
+      
     }
     else if(this.session_data.role=='admin'){
       this.admin=true;

@@ -58,8 +58,10 @@ this.afd.object(BASE_URL).snapshotChanges().subscribe(success=>{
   getClassData(){
     this.afd.object(BASE_URL+"data/class/"+this.student_data.class+"/").snapshotChanges().subscribe(success=>{
       this.payload_data=success.payload.val();
-      this.student_data.teacher_id=this.payload_data.class_teacher;
+      if(this.payload_data!=null){
+         this.student_data.teacher_id=this.payload_data.class_teacher;
       this.student_data.teacher_name=this.payload_data.class_teacher_name;
+      }
     })
   }
   giantfunction(){
@@ -102,6 +104,12 @@ this.router.navigateByUrl('/studentresult')
   }
   goToChat(){
 this.router.navigateByUrl('/studentchatlist');
+  }
+  goToMoodle(){
+    this.router.navigateByUrl('/studentmoodle');
+  }
+  goToImplinks(){
+    this.router.navigateByUrl('/implinklist')
   }
 }
 var snapshotToArray = function(snaps){

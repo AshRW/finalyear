@@ -35,7 +35,7 @@
                               </div>
                         <select id="inputState" class="form-control" formControlName="class" required>
                           <option selected value="">Year</option>
-                          <option value="{{y}}" *ngFor="let y of level">{{y}}</option>
+                          <option value="{{y.class}}" *ngFor="let y of level">{{y.class}}</option>
                         </select>
                         </div>
 
@@ -45,7 +45,7 @@
                               </div>
                         <select id="inputState" class="form-control" formControlName="department" required>
                           <option selected value="">Department</option>
-                          <option value="{{d}}" *ngFor="let d of department">{{d}}</option>
+                          <option value="{{d.name}}" *ngFor="let d of department">{{d.name}}</option>
                         </select>
                         </div>
                     </form>

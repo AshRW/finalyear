@@ -43,6 +43,12 @@ import { FeedbackListComponent } from './feedback-list/feedback-list.component';
 import { FeedbacklistStudentComponent } from './feedbacklist-student/feedbacklist-student.component';
 import { AdminmoodleListComponent } from './adminmoodle-list/adminmoodle-list.component';
 import { TestfourComponent } from './testfour/testfour.component';
+import { HighlightlistComponent } from './highlightlist/highlightlist.component';
+import { AddhighlightComponent } from './addhighlight/addhighlight.component';
+import { PlacementlistComponent } from './placementlist/placementlist.component';
+import { AddplacementComponent } from './addplacement/addplacement.component';
+import { ImplinkslistComponent } from './implinkslist/implinkslist.component';
+import { AddimplinksComponent } from './addimplinks/addimplinks.component';
 
 
 var firebaseConfig = {
@@ -83,7 +89,13 @@ var routes:Routes=[
   {path:"feedbacklist", component:FeedbackListComponent},
   {path:"feedbacklist_student", component:FeedbacklistStudentComponent},
   {path:"adminmoodle_list", component:AdminmoodleListComponent},
-  {path:"test4", component:TestfourComponent}
+  {path:"test4", component:TestfourComponent},
+  {path:"placementlist", component:PlacementlistComponent},
+  {path:"addplacement", component:AddplacementComponent},
+  {path:"highlightlist", component:HighlightlistComponent},
+  {path:"addhighlight", component:AddhighlightComponent},
+  {path:"implinklist", component:ImplinkslistComponent},
+  {path:"addimplink", component:AddimplinksComponent}
 ];
 @NgModule({
   declarations: [
@@ -116,7 +128,13 @@ var routes:Routes=[
     FeedbackListComponent,
     FeedbacklistStudentComponent,
     AdminmoodleListComponent,
-    TestfourComponent
+    TestfourComponent,
+    HighlightlistComponent,
+    AddhighlightComponent,
+    PlacementlistComponent,
+    AddplacementComponent,
+    ImplinkslistComponent,
+    AddimplinksComponent
   ],
   imports: [
     BrowserModule,

@@ -12,6 +12,7 @@ export class FirestoreService {
   fileUrl: Observable<any>;
 
   constructor(private afs:AngularFireStorage) { }
+
   uploadFile(file, filePath) {
     // const file = event.target.files[0];
     // const filePath = '/trial/ok/';
@@ -27,6 +28,7 @@ export class FirestoreService {
     //  .subscribe()
    // return this.downloadURL=fileRef.getDownloadURL();
   }
+  
   downloadFile(path){
     const ref=this.afs.ref(path);
     return this.fileUrl=ref.getDownloadURL();

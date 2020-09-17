@@ -133,6 +133,56 @@
 </div>
 </div>
 <!-- 2nd row ends here -->
+
+<!-- <div class="row text-center">
+  <u><p>PLACEMENTS:</p></u>
+  <div class="col-sm" *ngFor="let p of placement">
+    <div class="card mx-4">
+        <div class="card-body ">
+          <h3 class="card-title" style="border: solid rgb(139, 199, 255);">{{p.name}} </h3>
+          <div class="card" style="width: 18rem; background-color: rgb(187, 219, 255);" >
+            <img src={{p.link}} class="card-img-top">
+            <div class="card-body">
+              <p class="card-text">
+                placed in <b>{{p.company}}</b>
+              </p>
+            </div>
+          </div>
+</div>
+</div>
+</div>
+</div> -->
+
+<!-- temp -->
+<u><p>PLACEMENTS:</p></u>
+<div class="row row-cols-4 text-center">
+  
+  <div class="col" *ngFor="let p of placement">
+    <div class="card" style="width: 18rem;">
+      <img src={{p.link}} class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">{{p.name}}</h5>
+        <p class="card-text"> placed in {{p.company}}</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- 3rd row ends here -->
+<div class="row text-center"><u><p>VIDEOS:</p></u>
+  <div class="col-md">
+    <iframe width="420" height="315"
+src="https://www.youtube.com/embed/lJqsebLP5j8">
+</iframe>
+  </div>
+  <div class="col-md">
+    <iframe width="420" height="315"
+src="https://www.youtube.com/embed/VpW9hUDJefg">
+</iframe>
+  </div>
+  
+</div>
+<!-- 4th row ends here -->
 </div>
 </main>
 </div>

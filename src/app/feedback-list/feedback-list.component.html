@@ -16,6 +16,10 @@
                         <select id="5" class="form-control" formControlName="for" required>
                           <option *ngFor="let c of classListData" value="{{c.class}}">{{c.class}}</option>
                         </select>
+                        <label for="5">For Branch</label>
+                        <select id="5" class="form-control" formControlName="branch" required>
+                          <option *ngFor="let b of branchListData" value="{{b.name}}">{{b.name}}</option>
+                        </select>
                         <div class="row">
                       <button type="button" class="btn btn-success" (click)="new_feedback()" [disabled]="!newFolderForm.valid">Add</button> &nbsp;
                       <button type="button" class="btn btn-success" (click)="cancel()">Canel</button>

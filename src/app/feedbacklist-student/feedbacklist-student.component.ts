@@ -5,6 +5,8 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { FireserService } from '../services/fireser.service';
 import { TransferService } from '../services/transfer.service';
 import { AngularFireDatabase } from '@angular/fire/database';
+import { data } from 'jquery';
+import { element } from 'protractor';
 
 @Component({
   selector: 'app-feedbacklist-student',
@@ -31,7 +33,7 @@ export class FeedbacklistStudentComponent implements OnInit {
       this.sessiondata=JSON.parse(sessionStorage.getItem('key'))
       console.log("loggedIN")
       this.getClasses();
-      this.getfeedbacks();
+      this.getfeedbacks2();
       // logged in
     if(this.sessiondata.admin_access==true){
       this.auth_admin=true
@@ -56,6 +58,21 @@ export class FeedbacklistStudentComponent implements OnInit {
       data=this.afd.snapshotToArray2(success);
       data.forEach(element => {
         if(element.status==true)
+        temp.push(element)
+      });
+      this.activeFeedback=temp;
+      // this.activeFeedback=this.afd.snapshotToArray2(success)
+    })
+  }
+  getfeedbacks2(){
+    let temp:any=[];
+    let data:any=[];
+    this.afd.pullListFilter('data/feedback/', "status", true).snapshotChanges().subscribe(success=>{
+      data=this.afd.snapshotToArray2(success);
+      data.forEach(element => {
+        if(element.for+"_"+element.branch==this.sessiondata.class+"_"+this.sessiondata.department)
+        temp.push(element)
+        else if(element.for+"_"+element.branch=="ALL_ALL")
         temp.push(element)
       });
       this.activeFeedback=temp;

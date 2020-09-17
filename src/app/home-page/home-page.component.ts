@@ -18,11 +18,28 @@ export class HomePageComponent implements OnInit {
   final:any=[];
   public notice_data:any=[];
   public highlights:any=[];
+  public placement:any=[];
+  public videoshow:any=[];
   ngOnInit() {
     this.getInstitute();
     this.getNoticeData();
     this.getHighlightData();
+    this.getPlacementData();
+    this.getShowvideoData();
   }
+
+  getShowvideoData(){
+    this.afd.list(BASE_URL+'data/showvideo/').snapshotChanges().subscribe(success=>{
+      this.videoshow=snapshotToArray(success); console.log(this.videoshow)
+    })
+  }
+
+  getPlacementData(){
+    this.afd.list(BASE_URL+'data/placement/').snapshotChanges().subscribe(success=>{
+      this.placement=snapshotToArray(success);
+    })
+  }
+
   getHighlightData(){
     this.afd.list(BASE_URL+'data/highlights/').snapshotChanges().subscribe(success=>{
       this.highlights=snapshotToArray(success);

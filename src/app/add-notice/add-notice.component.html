@@ -29,6 +29,7 @@
                           <option value="2nd">2nd Year</option>
                           <option value="3rd">3rd Year</option>
                           <option value="Final">Final Year</option>
+                          <option value="ALL_ALL">All</option>
                         </select>
                       </div>
                       <div class="form-group col-md-6">
@@ -36,7 +37,7 @@
                         <input type="date" class="form-control" id="6" placeholder="Date" formControlName="for_date" required>
                       </div>
                     </div>
-                    <button [disabled]="!noticeform.valid" type="submit" class="btn btn-primary" (click)="button()">Sign in</button>
+                    <button [disabled]="!noticeform.valid" type="submit" class="btn btn-primary" (click)="button()">Create Notice</button>
                     <!-- <button type="submit" class="btn btn-primary" (click)="button()">Add Notice</button> -->
                     <!-- test end -->
                   </form>

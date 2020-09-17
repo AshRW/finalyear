@@ -32,7 +32,7 @@
                                         <th class="text-center">For Date</th>
                                         <th class="text-center">Given Date</th>
                                         <th class="text-center">More Info</th>
-                                        <th class="text-center">Delete</th>
+                                        <th *ngIf="auth_admin==true" class="text-center">Delete</th>
                                       </tr>
                                     </thead>
                                     <tbody>
@@ -45,7 +45,7 @@
                                         <td class="text-center">{{a.for_date}}</td>
                                         <td class="text-center">{{a.given_date}}</td>
                                         <td class="text-center"><button type="button" class="btn btn-primary" (click)="clicker(i)">Info</button></td>
-                                        <td class="text-center"><button type="button" class="btn btn-primary" (click)="deleteNotice(i)">Delete</button></td>
+                                        <td *ngIf="auth_admin==true" class="text-center"><button type="button" class="btn btn-primary" (click)="deleteNotice(i)">Delete</button></td>
                                       </tr>
                                     </tbody>
                                   </table>
