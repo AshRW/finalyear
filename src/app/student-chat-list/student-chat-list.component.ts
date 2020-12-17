@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class StudentChatListComponent implements OnInit {
 
   constructor() { }
-
+  public loading=false
   ngOnInit() {
   }
 

@@ -16,6 +16,7 @@ export class TeacherChatComponent implements OnInit {
   ngOnInit() {
     this.getAll();
   }
+  public loading=false;
   msgForm:any=new FormGroup({
     message:new FormControl('', Validators.required)
   });

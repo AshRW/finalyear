@@ -14,6 +14,7 @@ export class StudentChatComponent implements OnInit {
   sender:any;
   receiver:any;
   chat_main_data:any;
+  public loading=false;
   uid:any="3IarZhp5vxR6YfnVspC4VKvQFpE3";
   u:any;
   constructor(private afd:AngularFireDatabase, private route:ActivatedRoute, private router:Router) {}

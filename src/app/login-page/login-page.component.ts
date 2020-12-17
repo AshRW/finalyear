@@ -116,6 +116,9 @@ this.afd.list(BASE_URL+'data/teacher', ref=>ref.orderByChild('email').equalTo(th
       })
     })
   }
+  goToResetPassword(){
+    
+  }
 }
 var snapshotToArray = function(snaps){
   var returnArr = [];
